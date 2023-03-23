@@ -1,81 +1,100 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import {getCollection} from 'astro:content';
+import WorkPreview from "../components/WorkPreview.astro";
+import EducationPreview from "../components/EducationPreview.astro";
+import {profiles} from "../data/profiles";
+
+// Content Fetching: List four most recent work projects
+const works = (await getCollection('work')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+
+// Content Fetching: List four most recent work projects
+const educations = (await getCollection('education')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Victor Alvarado | Software Engineer">
+    <Header title="Victor Alvarado" description="SWE &amp; Full Stack Developer" showContact={true}/>
+    <main>
+        <section class="container">
+            <h2 class="section-title">About</h2>
+            <p>
+                Hello, I'm Victor Alvarado, a skilled SWE, front-end developer, and designer with a passion for native
+                Android development. With over <b>7 years of experience</b> in the software and design industries, I've
+                worked with a variety of organizations around the world, including Ns Pro's, Beanario Software, Ocho
+                App, Aliat, Banco Atlantida, Buzzy Company, and many more. I am currently based in Honduras and
+                have a strong passion for leveraging cutting-edge technologies, such as Astro.Build, React.JS, Node.JS,
+                MySql, Laravel,
+                and Yii2 framework, to develop web platforms that deliver exceptional user experiences.
+            </p>
+            <p>
+                Over the years, I have worked on a variety of projects, from large to organizations to small projects
+                for startups and personal projects. This breadth of experience has equipped me with a wide range of
+                skills and expertise across various project types, as well as Experience working with teams of different
+                sizes and goals.
+            </p>
+            <p>
+                I also write and speak about code.
+                You can catch up with me on Figma Community, Github or Twitter.
+            </p>
+        </section>
+        <section class="container">
+            <h2 class="section-title">Experience</h2>
+            {
+                works.map((work) => (
+                        <WorkPreview work={work}/>
+                ))
+            }
+        </section>
+        <section class="container">
+            <h2 class="section-title">Education</h2>
+            {
+                educations.map((education) => (
+                        <EducationPreview coll={education}/>
+                ))
+            }
+        </section>
+        <section class="container">
+            <h2 class="section-title">
+                Profiles
+            </h2>
+            <div class="profiles">
+                {profiles.map(social => (
+                                <div class="split">
+                                    <h4 class="label">{social.name}</h4>
+                                    <div>
+                                        <a href={social.url}>{social.description}</a>
+                                    </div>
+                                </div>
+                    )
+                )}
+            </div>
+        </section>
+    </main>
+    <Footer/>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: 600px) {
+        .profiles {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--spacing-l);
+        }
+    }
+    .split {
+        align-items: baseline;
+        margin-bottom: var(--spacing-l);
+    }
+
+
+
 </style>

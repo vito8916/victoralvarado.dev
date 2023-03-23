@@ -1,0 +1,103 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    showContact?: boolean;
+}
+
+const { title, description, showContact } = Astro.props;
+const titles = title.split(" ");
+---
+<header class="container">
+    <div class="header-author">
+        <a href="/">
+            <h1>{titles[0]} <span class="text-gradient">{titles[1]}</span></h1>
+        </a>
+        <p>
+            {description}
+        </p>
+    </div>
+    { showContact &&
+        <div class="header-contact">
+            <hr class="header-contact-divider">
+            <div class="c-grid">
+                <div class="c-content__body">
+                    <h4 class="label">Location</h4>
+                    <address>
+                        Tegucigalpa, Honduras
+                    </address>
+                </div>
+                <div class="c-content__body">
+                    <h4>Linkedin</h4>
+                    <a href="https://www.linkedin.com/in/victor-alvaradohn">@victor-hn</a>
+                </div>
+                <div class="c-content__body">
+                    <h4>Email</h4>
+                    <a href="mailto:victoralvarado.dev@gmail.com">victoralvarado.dev@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    }
+
+</header>
+
+<style>
+    header {
+        width: 100%;
+        margin-bottom: var(--spacing-xxl);
+        color: var(--color-text);
+    }
+
+    header .header-author {
+        margin-bottom: var(--spacing);
+    }
+
+    header .header-author .text-gradient {
+        color: #00a651;
+        font-weight: 700;
+    }
+
+    .header-contact-divider {
+        border: 0;
+        border-top: 1px solid var(--color-text);
+        margin: var(--spacing) 0;
+    }
+
+    header .header-contact .c-grid {
+        display: grid;
+        grid-gap: var(--spacing);
+    }
+
+    @media (min-width: 600px) {
+        header .header-contact .c-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .c-content__body h4 {
+        margin-bottom: var(--spacing-s);
+        margin-top: 0;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    header h1 span {
+        font-size: 3rem;
+    }
+
+    header a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    header p {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+</style>

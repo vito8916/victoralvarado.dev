@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import EducationPreview from "../components/EducationPreview.astro";
+import Link from "../components/Link.astro";
+---
+<Layout title="Victor Alvarado | My Setup">
+    <Header title="My Setup" description="All my devices, gadgets & accesories" showContact={false}/>
+
+    <main>
+        <section class="container">
+            <h2 class="section-title">A Dreamy Home Setup</h2>
+            <p>
+                Welcome to my dreamy setup, where I have carefully crafted an environment that supports my productivity
+                and creativity. From the hardware to the software, everything is chosen to make my work flow smoothly
+                and seamlessly.
+            </p>
+            <p>
+                With this setup, I feel inspired, motivated, and ready to take on any challenge that comes my way.
+            </p>
+            <picture>
+                <source srcset="/assets/images/setup.webp" type="image/webp">
+                <source srcset="/assets/images/setup.jpeg" type="image/jpeg">
+                <img src="/assets/images/setup.jpeg" alt="My Setup">
+            </picture>
+        </section>
+        <section class="container">
+            <h2 class="section-title">Hardware</h2>
+            <ul>
+                <li>
+                    <Link
+                            href="https://a.co/d/eflpSRp"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Buy on Amazon a MacBook Pro 16 inch 2019"
+                            title="MacBook Pro 16 inch 2019"
+                    />
+                </li>
+                <li>
+                    <Link
+                            href="https://a.co/d/3xifsUu"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Buy on Amazon a ASUS ProArt PA34VC 34 inch QHD Ultra Wide 1440p Curved Monitor"
+                            title='ASUS ProArt PA34VC 34" QHD Ultra Wide 1440p Curved Monitor'
+                    />
+                </li>
+                <li>
+                    <Link
+                            href="https://a.co/d/bIUiW5K"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Buy on Amazon a Desk pad"
+                            title='KNODEL Desk Mat, Dual-Sided Office Desk Pad, Mouse Pad'
+                    />
+                </li>
+                <li>
+                    <Link
+                            href="https://a.co/d/f4z4tJB"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Buy on Amazon a OMOTON Vertical Laptop Stand, Double Desktop Stand Holder with Adjustable Dock"
+                            title='OMOTON Vertical Laptop Stand, Double Desktop Stand Holder with Adjustable Dock'
+                    />
+                </li>
+            </ul>
+        </section>
+        <section class="container">
+            <h2 class="section-title">Software</h2>
+            <ul>
+                <li>
+                    <Link
+                            href="https://www.iterm2.com/"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Install iTerm2 on your computer"
+                            title='iTerm2'
+                    />
+                </li>
+                <li>
+                    <Link
+                            href="https://www.jetbrains.com/webstorm/"
+                            disabled={false}
+                            isExternal={true}
+                            className={`none`}
+                            ariaLabel="Install WebStorm on your computer"
+                            title='WebStorm'
+                    />
+            </ul>
+        </section>
+    </main>
+
+    <Footer/>
+</Layout>

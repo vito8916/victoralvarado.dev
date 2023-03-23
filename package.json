@@ -10,6 +10,8 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@fontsource/roboto-mono": "^4.5.10",
+		"@fontsource/twinkle-star": "^4.5.9",
 		"astro": "^2.0.13"
 	}
 }

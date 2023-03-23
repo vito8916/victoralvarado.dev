@@ -1,0 +1,60 @@
+<footer class="container">
+    <div class="footer__footer">
+        <div>
+            <p class="footer__copyright">
+                Created with
+                <a href="https://www.astro.build/">
+                    <img class="framework-logo" src="/astro-logo.svg" alt="Astro build logo" width="20" height="20" />
+                    Astro</a>
+            </p>
+        </div>
+        <ul class="footer__policies">
+            <li class="footer__policies-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            <li class="footer__github">
+                <a href="/setup">
+                    My Setup
+                </a>
+            </li>
+            <li class="footer__linkedin">
+                <a href="/hosting">
+                    Hosting
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<style>
+    footer {
+        margin-top: calc(5 * var(--spacing));
+        margin-bottom: 5vw;
+    }
+
+    .footer__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1024px) {
+        .footer__footer {
+            flex-direction: row;
+        }
+    }
+
+    .footer__policies {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .framework-logo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+</style>

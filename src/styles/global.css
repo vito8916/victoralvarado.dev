@@ -1,0 +1,97 @@
+:root {
+    --color-bg: #F8F6F5;
+    --color-highlight: #1a1a1a;
+    --color-text: #333333;
+    --color-titles: #1a1a1a;
+
+    --font-sans: "Roboto Mono", monospace;
+    --font-serif: "Roboto Mono", monospace;
+    --font-size: 16px;
+    --font-s: 14px;
+    --font-size-l: 18px;
+    --spacing: 1.5em;
+    --spacing-s: calc(0.5 * var(--spacing));
+    --spacing-m: var(--spacing);
+    --spacing-l: calc(1.5 * var(--spacing));
+    --spacing-xl: calc(2.5 * var(--spacing));
+    --spacing-xxl: calc(5 * var(--spacing));
+    --spacing-col: calc(12 * var(--spacing));
+    --spacing-width-max: 38rem;
+    --spacing-width-tiny: 15rem;
+    --spacing-width-xl: 50rem;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #2b2c2c;
+        --color-highlight: #e3e3e3;
+        --color-text: #979899;
+        --color-titles: #e3e3e3;
+    }
+}
+html {
+    color: var(--color-text);;
+    font-family: "Roboto Mono", monospace;
+    font-size: var(--font-size);
+    background-color: var(--color-bg);
+}
+body {
+    margin: 5vw 0;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: var(--color-bg);
+}
+code {
+    font-family: "Roboto Mono", monospace;
+}
+address {
+    font-style: normal;
+}
+b {
+    color: #00a651;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+}
+h2 {
+    margin: var(--spacing-m) 0;
+}
+h1, h2, h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin: var(--spacing-s) 0;
+    color: var(--color-titles);
+}
+p, ol, ul, span {
+    font-family: var(--font-serif);
+    font-weight: normal;
+    margin: 1em 0;
+    font-size: var(--font-size);
+    font-feature-settings: 'onum' 1;
+}
+a {
+    color: var(--color-text);
+    text-decoration-color: var(--color-highlight);
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 0.05em;
+}
+a:hover {
+    transition: color 0.2s ease-in;
+    color: var(--color-highlight);
+}
+
+{/* Sections */}
+section {
+    margin-bottom: var(--spacing-xl);
+}
+
+section h2 {
+    margin: var(--spacing-m) 0;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
