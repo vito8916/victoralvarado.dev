@@ -1,0 +1,47 @@
+---
+import { getCollection, CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+export async function getStaticPaths() {
+    const educations = await getCollection("education");
+
+    return educations.map((education) => ({
+        params: { slug: education.slug },
+        props: {
+            education,
+        },
+    }));
+}
+interface Props {
+    education: CollectionEntry<"education">;
+}
+
+const { education } = Astro.props;
+const { Content } = await education.render();
+const allPosts = await getCollection("education");
+
+
+---
+
+<Layout>
+    <div class="container">
+        <div class="breadcrumbs-section">
+            <a class="" onclick="history.back()">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                ><path
+                        d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+                ></path>
+                </svg><span>Go back</span>
+            </a>
+        </div>
+    </div>
+    <Header title={education.data.position} description={"at " + education.data.company} showContact={false}/>
+    <main>
+        <section class="container">
+            <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+                <Content />
+            </article>
+        </section>
+    </main>
+</Layout>

@@ -28,7 +28,7 @@ const { data, slug } = Astro.props.work;
     <div>
         <p class="work-description">
             {data.description}
-            <a href={ slug }>Read More</a>
+            <a href= {`/work/${slug}/`}>Read More</a>
         </p>
 
     </div>

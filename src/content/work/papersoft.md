@@ -1,4 +1,5 @@
 ---
+title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
 position: Full Stack Engineer
 location: Tegucigalpa, Honduras
 date: 2017-01-17
@@ -11,4 +12,18 @@ tags:
   - Backend
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## Harnessing Tech for Environmental Impact: My Full-Stack Developer Journey
+
+In the realm of Full-Stack Development, my journey has been both diverse and impactful. From creating mobile applications to designing data-rich dashboards, I've worked to bring about meaningful change, particularly in the area of environmental conservation in Honduras.
+
+## Mobilizing Environmental Awareness with Android
+For the A.M.D.C of Honduras, I embarked on a project that was close to my heart. I developed an Android application dedicated to registering over 3,000 businesses related to hazardous waste management. This wasn't just a directory; it was a testament to the growing awareness and need for better waste management practices.
+
+## Unveiling the Stark Reality through Data
+Building on the previous endeavor, I architected a comprehensive dashboard to scrutinize the information collected via the Android survey app. The insights drawn were both enlightening and alarming — only 30% of the businesses were handling toxic waste as per recommended guidelines. This revelation underscored the urgency and importance of educating and enforcing safer waste management practices.
+
+## Streamlining Logistics through Digital Solutions
+Diversifying my portfolio, I designed a dual solution consisting of an Android app and a web dashboard to oversee the intricate operations of cargo vehicles. This tool was engineered to meticulously track and manage the entry and exit of vehicles, document their routes, and monitor fuel consumption. Beyond mere tracking, it served as an essential tool for logistical efficiency and environmental responsibility.
+
+## Conclusion
+My stint as a Full-Stack Developer has not only honed my technical prowess but also instilled in me a deep sense of responsibility. The interplay of code and its consequential impact on the environment and society reaffirms my belief in the transformative power of technology. As I chart my course forward, I'm fueled by the promise of more projects that blend innovation with sustainability.

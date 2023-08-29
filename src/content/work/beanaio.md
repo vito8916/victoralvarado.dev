@@ -1,4 +1,5 @@
 ---
+title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
 position: Lead Frontend Engineer
 location: Tegucigalpa, Honduras
 date: 2018-01-17
@@ -11,4 +12,20 @@ tags:
   - Backend
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## From Pixels to Apps: My Journey as a FrontEnd & Android Developer
+
+Navigating the realms of FrontEnd and Android development requires more than just coding skills. It's about understanding user needs, collaborating with teams, and delivering efficient solutions. Let's delve into my key milestones in both areas.
+
+## FrontEnd Mastery: Leading & Innovating
+Being trusted as a Front-End technical leader, I had the opportunity to lead a talented group of three engineers. Together, we tackled challenges head-on, streamlining how we organized and structured our projects.
+
+A particular highlight of my career was my stint as an outsourcing engineer, where I was entrusted with the development of integral systems for a major national bank. This wasn't just another project; it was about sculpting a loan management system, designing user enrollment processes, and tracking collateral assets. Over a year, we ensured a seamless financial experience for countless users.
+
+## Crafting Mobile Solutions: The Android Experience
+Switching gears to Android, my journey took an exciting turn when I got involved in Ocho.life. I designed and created an Android app tailored for restaurants, revolutionizing how they received and processed orders. The reach of this app was extensive — implemented in over 1,000 businesses. This wasn't just about numbers; it was about making a tangible difference in the ordering process, bringing efficiency and ease to both restaurants and customers.
+
+## Pioneering a Delivery App Revolution
+Being part of the nascent team in the creation and launch of a delivery app startup was nothing short of exhilarating. Collaborating closely with the development, design, CTO, and CEO teams, I found myself at the heart of brainstorming sessions, generating innovative ideas and crafting solutions for intricate challenges. One of our core missions was ensuring inclusivity. I took it upon myself to optimize the Android application, ensuring its seamless functionality across the spectrum of Android devices — irrespective of their specifications. This was pivotal in making our service accessible to a broader audience, even those with low-spec devices.
+
+## Conclusion 
+Whether it's the vast expanses of the web or the compact world of mobile apps, my journey in FrontEnd and Android development has been about more than just lines of code. It's about shaping experiences, leading teams, and creating solutions that resonate with the end-users. As I forge ahead, I'm enthusiastic about the endless possibilities that lie ahead in this ever-evolving tech landscape.

@@ -29,7 +29,7 @@
     }
 }
 html {
-    color: var(--color-text);;
+    color: var(--color-text);
     font-family: "Roboto Mono", monospace;
     font-size: var(--font-size);
     background-color: var(--color-bg);
@@ -81,6 +81,10 @@ a:hover {
     color: var(--color-highlight);
 }
 
+main {
+    padding-bottom: var(--spacing-s);
+}
+
 {/* Sections */}
 section {
     margin-bottom: var(--spacing-xl);
@@ -94,4 +98,32 @@ section h2 {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.breadcrumbs-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    /*padding-top: 5vh;*/
+}
+.breadcrumbs-section a {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    /*color: var(--color-text);*/
+    cursor: pointer;
+    margin: 0;
+}
+
+.breadcrumbs-section svg {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill:  var(--color-text);
+}
+
+.breadcrumbs-section a:hover svg {
+    transition: fill 0.2s ease-in;
+    fill: var(--color-highlight);
 }
