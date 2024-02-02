@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import formatDatetime from '../utils/formatDatetime.js';
+
+interface Props {
+    coll: CollectionEntry<'projects'>;
+}
+
+const { data, slug } = Astro.props.coll;
+
+---
+
+<div class="work">
+    <div class="work-info">
+        <small class="work-timeframe">
+            {formatDatetime(data.startDate)} – { data.endDate !== undefined ? formatDatetime(data.endDate) : 'Present'}
+        </small>
+        <h3 class="work-position">
+            {data.title}
+        </h3>
+        <small class="work-company">
+            At {data.company}
+        </small> <br/>
+        <small class="work-location">
+            {data.title}
+        </small>
+    </div>
+    <div>
+        <p class="work-description">
+            {data.description}
+            <a href= {`/projects/${slug}/`}>Read More</a>
+        </p>
+
+    </div>
+</div>
+
+<style>
+
+    .work {
+        margin-bottom: var(--spacing-l);
+    }
+    .work-position {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    .work-company {
+        color: var(--color-titles);
+    }
+
+    @media (min-width: 600px) {
+        .work {
+            display: grid;
+            grid-template-columns: clamp(8em, 20vw, var(--spacing-col)) 1fr;
+            align-items: baseline;
+            margin-bottom: var(--spacing-s);
+        }
+        .work .work_date { margin: 0; }
+    }
+
+    small {
+        margin-top: var(--spacing-s);
+    }
+</style>
