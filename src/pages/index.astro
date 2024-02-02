@@ -1,100 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import {getCollection} from 'astro:content';
-import WorkPreview from "../components/WorkPreview.astro";
-import EducationPreview from "../components/EducationPreview.astro";
-import {profiles} from "../data/profiles";
-
-// Content Fetching: List four most recent work projects
-const works = (await getCollection('work')).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-
-// Content Fetching: List four most recent work projects
-const educations = (await getCollection('education')).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Victor Alvarado | Software Engineer">
-    <Header title="Victor Alvarado" description="SWE &amp; Full Stack Developer" showContact={true}/>
-    <main>
-        <section class="container">
-            <h2 class="section-title">About</h2>
-            <p>
-                Hello, I'm Victor Alvarado, a <b>skilled SWE, full-stack developer</b>, and designer with a passion for native
-                Android development. With over <b>7 years of experience</b> in the software and design industries, I've
-                worked with a variety of organizations around the world, including
-                <a href="https://beanar.io/" target="_blank">Beanario Software</a>,
-                <a href="https://ocho.life/" target="_blank">Ocho App</a>,
-                <a href="https://www.aliatuniversidades.com.mx/aliat" target="_blank">Aliat</a>,
-                <a href="https://www.bancatlan.hn/" target="_blank">Banco Atlántida</a>,
-                <a href="https://www.buzzy.buzz/" target="_blank">Buzzy Company</a>,
-                <a href="https://www.nspros.io/" target="_blank">Ns Pro's</a>
-                , and many more. I am currently based in Ireland to improve my English skill.
-                I have a strong passion for leveraging cutting-edge technologies, such as <b>Astro.Build, React.JS, Node.JS,
-                MySql, Laravel, and Yii2 framework</b>, to develop web platforms that deliver exceptional user experiences.
-            </p>
-            <p>
-                Over the years, I have worked on a variety of projects, from large organizations to small projects
-                for startups and personal projects. This breadth of experience has equipped me with a wide range of
-                skills and expertise across various project types, as well as experience working with teams of different
-                sizes and goals.
-            </p>
-            <p>
-                I also write and speak about code.
-                You can catch up with me on Figma Community, Github or Linkedin.
-            </p>
-        </section>
-        <section class="container">
-            <h2 class="section-title">Experience</h2>
-            {
-                works.map((work) => (
-                        <WorkPreview work={work}/>
-                ))
-            }
-        </section>
-        <section class="container">
-            <h2 class="section-title">Education</h2>
-            {
-                educations.map((education) => (
-                        <EducationPreview coll={education}/>
-                ))
-            }
-        </section>
-        <section class="container">
-            <h2 class="section-title">
-                Profiles
-            </h2>
-            <div class="profiles">
-                {profiles.map(social => (
-                                <div class="split">
-                                    <h4 class="label">{social.name}</h4>
-                                    <div>
-                                        <a target="_blank" href={social.url}>{social.description}</a>
-                                    </div>
-                                </div>
-                    )
-                )}
-            </div>
-        </section>
-    </main>
-    <Footer/>
+<Layout title="Victor Alvarado - SR. Software Engineer">
+    <section class="container">
+        <span>Hi, I'm</span>
+        <h1 class="section-title">Victor Alvarado</h1>
+        <h2 class="section-title">Welcome to my personal website.</h2>
+        <p>
+            I'm working to improve the user experience for this website. At the same time I'll migrate from Astro 2.0 to
+            Astro 4.0. Stay tuned for updates.
+        </p>
+    </section>
 </Layout>
 
 <style>
-    .section-title {
-        font-size: 1.2rem;
+    span {
+        display: inline-block;
     }
-    @media (min-width: 600px) {
-        .profiles {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: var(--spacing-l);
-        }
-    }
-    .split {
-        align-items: baseline;
-        margin-bottom: var(--spacing-l);
+    h1 {
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1.35rem;
     }
 </style>
