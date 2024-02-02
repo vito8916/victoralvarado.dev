@@ -1,0 +1,33 @@
+---
+import Header from "./Header.astro";
+
+const {entry, Content} = Astro.props;
+---
+<div class="container">
+    <div class="breadcrumbs-section">
+        <a class="" onclick="history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+                    d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+            ></path>
+            </svg><span>Go back</span>
+        </a>
+    </div>
+</div>
+<Header title={entry.data.position ?? entry.data.title} description={"at " + entry.data.company} showContact={false}/>
+<main>
+    <section class="container">
+        <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+            <Content />
+        </article>
+    </section>
+</main>
+
+<style is:global>
+    /* article h1 {
+         font-size: 1.5rem;
+     }*/
+    h2:first-of-type {
+        font-size: 1.5rem;
+    }
+</style>

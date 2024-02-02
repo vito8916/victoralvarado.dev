@@ -1,0 +1,29 @@
+---
+import {profiles} from "../data/profiles";
+---
+
+<div class="profiles">
+    {profiles.map(social => (
+                    <div class="split">
+                        <h4 class="label">{social.name}</h4>
+                        <div>
+                            <a target="_blank" href={social.url}>{social.description}</a>
+                        </div>
+                    </div>
+        )
+    )}
+</div>
+
+<style>
+    @media (min-width: 600px) {
+        .profiles {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--spacing-l);
+        }
+    }
+    .split {
+        align-items: baseline;
+        margin-bottom: var(--spacing-l);
+    }
+</style>
