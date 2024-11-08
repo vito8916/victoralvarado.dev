@@ -1,0 +1,90 @@
+---
+import {Image} from "astro:assets";
+import meIceland1 from '../assets/images/about/me-iceland-1.jpg';
+import meAtTheEiffelTower from '../assets/images/about/me-at-the-eiffel-tower.jpg';
+import meAndJohn from '../assets/images/about/me-and-john.jpeg';
+import faro from '../assets/images/about/faro.jpg';
+import meIrlFlag from '../assets/images/about/me-irl-flag.jpg';
+import reiChrs from '../assets/images/about/rei-chrs.jpeg';
+import inGlacier from '../assets/images/about/in-glaciar.webp';
+import aurora from '../assets/images/about/aurora.png';
+import killiney from '../assets/images/about/killiney-hill.jpg';
+import workaway1 from '../assets/images/about/workaway1.jpg';
+import templeBar from '../assets/images/about/templebar.webp';
+import buda from '../assets/images/about/buda.webp';
+import nature from '../assets/images/about/nature.gif';
+---
+
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="img-wrapper">
+            <Image src={nature} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={templeBar} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={meAndJohn} alt=""/>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="img-wrapper">
+            <Image src={aurora} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={faro} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={buda} alt=""/>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="img-wrapper">
+            <Image src={meIrlFlag} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={workaway1} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={reiChrs} alt=""/>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="img-wrapper">
+            <Image src={meIceland1} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={killiney} alt=""/>
+        </div>
+        <div class="img-wrapper">
+            <Image src={inGlacier} alt=""/>
+        </div>
+    </div>
+</div>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; /* gap-4 */
+    }
+
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(4, 1fr); /* md:grid-cols-4 */
+        }
+    }
+
+    .grid-item {
+        display: grid;
+        gap: 1rem; /* gap-4 */
+    }
+
+    .img-wrapper img {
+        /*height: auto;*/ /* h-auto */
+        height: 100%;
+        object-fit: cover;
+        max-width: 100%; /* max-w-full */
+        /*border-radius: 0.5rem;*/ /* rounded-lg */
+    }
+</style>

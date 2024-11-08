@@ -2,6 +2,7 @@
 import {CollectionEntry, getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import ContentPreview from "../../components/ContentPreview.astro";
 export interface Props {
     post: CollectionEntry<"work">;
 }
@@ -21,44 +22,21 @@ const { post } = Astro.props;*/
 export async function getStaticPaths() {
     const works = await getCollection('work');
     return works.map(entry => ({
-        params: { slug: entry.slug }, props: { entry },
+        params: { slug: entry.slug },
+        props: { entry },
     }));
 }
 
-// 2. For your template, you can get the entry directly from the prop
+export interface Props {
+    entry: CollectionEntry<"work">;
+}
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 ---
 
 <Layout title="Victor Alvarado | Full Stack Developer">
-    <div class="container">
-        <div class="breadcrumbs-section">
-            <a class="" onclick="history.back()">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                ><path
-                        d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-                ></path>
-                </svg><span>Go back</span>
-            </a>
-        </div>
-    </div>
-    <Header title={entry.data.position} description={"at " + entry.data.company} showContact={false}/>
-    <main>
-        <section class="container">
-            <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-                <Content />
-            </article>
-        </section>
-    </main>
+    <ContentPreview entry={entry} Content={Content}/>
 </Layout>
 
-
-<style is:global>
-   /* article h1 {
-        font-size: 1.5rem;
-    }*/
-    h2:first-of-type {
-        font-size: 1.5rem;
-    }
-</style>

@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import {getCollection} from 'astro:content';
+import EducationPreview from "../../components/EducationPreview.astro";
+import Menu from "../../components/Menu.jsx";
+
+// Content Fetching: List four most recent work projects
+const educations = (await getCollection('education')).sort(
+    (a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
+---
+
+<Layout title="Victor Alvarado | My Education">
+    <Header title="My Education" description=" Here you can find more details about my studies, diplomas and certifications." showContact={false}/>
+    <main>
+        <!--Educations Section-->
+        <section class="container border-bottom">
+
+            {
+                educations.map((education) => (
+                        <EducationPreview coll={education}/>
+                ))
+            }
+        </section>
+        <!--related menu options-->
+        <section class="container">
+            <Menu
+                    client:only="react"
+                    description={"Maybe you could be interested in knowing more about my work experience, my education, or my personal\n" +
+                        "                projects."}
+            />
+        </section>
+    </main>
+</Layout>

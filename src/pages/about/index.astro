@@ -1,0 +1,326 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import Menu from "../../components/Menu.jsx";
+import {Image} from 'astro:assets';
+import vicAndJose from '../../assets/images/about/vic_and_jose_childhood.webp';
+import spAdd from '../../assets/images/about/publi_ingles.webp';
+import spShow from '../../assets/images/about/spaper.gif';
+import vic1 from '../../assets/images/about/vic1.webp';
+import Audio from "../../components/Audio.astro";
+import nudge from '../../assets/sounds/003.mp3';
+import Gallery from "../../components/Gallery.astro";
+---
+
+<Layout title="Victor Alvarado | About Me">
+    <div class="container">
+        <div class="breadcrumbs-section">
+            <a class="" onclick="history.back()">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                ><path
+                        d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+                ></path>
+                </svg><span>Go back</span>
+            </a>
+        </div>
+    </div>
+    <Header title="About Me" description=" Welcome to my personal website." showContact={false}/>
+    <main>
+        <!--SECTION - ABOUT ME AND GREETING -->
+        <section class="container mb-12">
+            <div class="profile-section">
+                <Image class="profile-picture" src={vic1} alt=""/>
+                <div>
+                    <p>
+                        Hi again! I'm Victor Alvarado, a Software Engineer, and Full Stack Developer. I'm from Honduras,
+                        a
+                        small
+                        country in Central America.
+                    </p>
+                    <p>
+                        I've been working as a software engineer for more than 7 years. <!--and I've had the opportunity to work
+                        with many
+                        companies around the world.-->
+                    </p>
+                    <p>In all these years I've learned a lot, I have worked with many languages and technologies. <!--in different
+                        projects, in different areas, and with different teams.-->
+                        I have worked as UI Designer, Frontend Developer, Backend Developer, Android Developer, and Full
+                        Stack
+                        Developer.
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Yes, I know! Maybe it's too much, but, you know what? I love it.
+                And probably you are wondering, why do I have so many titles? Well, I think that the best way to learn
+                is to do
+                it, and I have always been curious to learn new things.
+                I don't consider my self an expert in any of these areas, but I have a lot of experience in each of
+                them.
+                I have learned a lot from my mistakes, and I have learned a lot from my successes.
+            </p>
+            <p class="text-highlight">
+                But, hey! I know that sometimes we have to settle down and focus on one thing, and that's why I'm
+                currently
+                working
+                as a Full Stack Developer using technologies like <b>Next.Js, Astro Build, FireBase, MongoDB and,
+                MySql</b>.
+            </p>
+        </section>
+
+        <!--SECTION - FACTS ABOUT ME-->
+        <section class="container mb-12">
+            <h2>
+                Interesting facts about how I started in this world:
+            </h2>
+            <ul>
+                <li>
+                    My first contact with a computer was at 11 years old at my aunt's house.
+                </li>
+                <li>
+                    The first thing I learned was play Age of Empires II.
+                </li>
+                <li>
+                    En 2004 me mude a la ciudad y ese mismo año tuvimos nuestra primera computadora en casa.
+                </li>
+                <li>
+                    Ese mismo año desarme por primera vez una computadora sin saber como volverla a armarla. Todo salio
+                    bien! :)
+                </li>
+                <li>
+                    Aprendi como funcionaba una computadora y como armarla y desarmarla.
+                </li>
+                <li>
+                    Aprendi a instalar Windows XP y a formatear una computadora.
+                </li>
+                <li>
+                    Me dedique a reparar las computadoras de mis amigos y vecinos.
+                </li>
+                <li>
+                    En el ahuge de hi5.com, aprendi HTML y CSS para personalizar mi perfil y el de mis amigos.
+                    Podria decirse que fue mi primer contacto con el desarrollo web.
+                </li>
+                <li>
+                    En 2010 conoci Linux y me enamore de Ubuntu. Aprendi todo al respecto.
+                </li>
+                <li>
+                    En 2011 inicie un canal de YouTube para compartir mis conocimientos en Ubuntu y Linux. Pero
+                    desafortunadamente lo deje. :(
+                </li>
+                <li>
+                    En 2012, con el ahuge de los smartphones, me interese en Android y empece a colaborar con la
+                    comunidad de XDA Developers.
+                </li>
+                <li>
+                    En 2012 estudie un diplomado en Diseno Grafico.
+                </li>
+                <li>
+                    En 2013 inicie a estudiar Ingenieria en Infotecnologia en la Universidad Jose Cecilio Del Valle.
+                </li>
+            </ul>
+        </section>
+
+        <!--SECTION - MEMORY PICTURE-->
+        <section class="container mb-12">
+            <h3>A beautiful memory from that time captured in a photo.</h3>
+            <Image src={vicAndJose} alt="" width={1080}/>
+            <p>
+                In this photo, me and my younger brother were using Microsoft Messenger with an old computer at my
+                aunt's house.
+                Fact: nowadays my brother is a Software Engineer as well.
+            </p>
+            <p>
+                Do you remember Microsoft Messenger and its famous nudge sound? I do, and you could remember it as well.
+            </p>
+            <Audio sound={nudge}/>
+        </section>
+
+        <!--SECTION - SIMPLY PAPER-->
+        <section class="container mb-12">
+            <h2>
+                The breaking changes in my life as a Software Engineer:
+            </h2>
+            <Image src={spAdd} alt="" width={800}/>
+            <p>
+                While I was studying at the university, I fell in love with programming, and I started to learn more
+                about it.
+                I started to learn C++, Java and how to create Android apps, and I started to work on small projects
+                called Simply Paper.
+            </p>
+            <p>
+                Simply Paper was a project where I shared self-made wallpapers for Android devices, and I learned a lot
+                about Android development.
+                This simple application gave me the opportunity to apply for a job as an Android Developer at a local
+                company. After that, my career as a Software Engineer started to grow, and I started to work with many
+                companies
+                around the world
+            </p>
+            <Image src={spShow} alt="" width={800}/>
+            <p>
+                <i>Simply Paper is down now, but I still have the wallpapers hosted on Flickr. You can check them out if
+                    you want.</i>
+            </p>
+            <div class="in-line">
+                <button class="button-custom">
+                    <a target="_blank" href="https://www.flickr.com/photos/134427773@N06/with/25694820412">
+                        Simply Paper Gallery
+                    </a>
+                </button>
+                <button class="button-custom">
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.dev.victor.spaper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00098 1.73438C4.17692 1.73438 4.34975 1.7808 4.50201 1.86895L20.5061 11.1345C20.9841 11.4112 21.1473 12.023 20.8705 12.501C20.783 12.6522 20.6574 12.7778 20.5061 12.8654L4.50201 22.1309C4.02405 22.4076 3.41226 22.2445 3.13555 21.7665C3.0474 21.6143 3.00098 21.4414 3.00098 21.2655V2.73438C3.00098 2.18209 3.44869 1.73438 4.00098 1.73438ZM12.2931 13.4132L7.79498 17.9124L13.494 14.6134L12.2931 13.4132ZM4.99998 6.11938V17.8784L10.8791 11.9992L4.99998 6.11938ZM15.284 10.4214L13.7071 11.9992L15.285 13.5764L18.009 11.9999L15.284 10.4214ZM7.79398 6.08537L12.2931 10.5852L13.493 9.38437L7.79398 6.08537Z"></path></svg>
+                    </a>
+                </button>
+            </div>
+            <!--<p>
+                So, I got my first professional job as an Android Developer, but also as a Web Developer in a government
+                project called "Credito Solidario".
+                In this project, I learned a lot about web development, and I started to work with PHP, MySQL, and
+                JavaScript.
+                After that, my career as a Software Engineer started to grow, and I started to work with many companies
+                around the world.
+            </p>
+            <h2>
+                El mundo no es color <span class="text-highlight"> rosa</span>:
+            </h2>
+            <p>
+                Despues de mi primer trabajo, obtuve uno nuevo en donde el salario era mucho mejor pero yo era el unico
+                desarrollador. Era una empresa de eventos en donde tenian un pequeno ERP
+                para gestionar los eventos, contabilidad, etc. El ERP estaba hecho en PHP, JavaScript y MySQL, y yo era
+                el encargado de mantenerlo y mejorarlo.
+            </p>
+            <p>
+                El problema? El anterior desarrollador
+                dejo el codigo minificado y ofuscado, por lo que no podia entenderlo. Asi que tuve que hacer ingenieria
+                inversa para entenderlo y mejorar el sistema. Fue un gran reto, pero una locura a la vez. Recuerdo haber
+                pasado muchas noches sin dormir y muy malos momentos por la presion.
+            </p>
+            <p>
+                No todo alli fue malo, por supuesto. Aprendi mucho, y tambien tuve la oportunidad de crear en otras
+                aplicaciones interesantes, pero esta vez desde cero y siguiendo mejores practicas. Pero al final decidi
+                renunciar y buscar mejores oportunidades.
+            </p>-->
+        </section>
+
+        <!--SECTION - ABOUT TRAVEL-->
+        <section class="container mb-12">
+            <h2>
+                The decision that changed my life:
+            </h2>
+            <p>
+                After realized that I was working too much and I was not happy with my life, I decided to move to
+                Dublin, Ireland to improve my English and live new experiences. This journey has changed my life in many
+                ways.
+            </p>
+            <ul class="mb-12">
+                <li>
+                    I improved my English a lot.
+                </li>
+                <li>
+                    I met many wonderful people from different countries.
+                </li>
+                <li>
+                    I learned a lot about different cultures.
+                </li>
+                <li>
+                    I learned a lot about myself.
+                </li>
+                <li>
+                    I learned a lot about life.
+                </li>
+                <li>
+                    I traveled a lot around Europe.
+                </li>
+                <li>
+                    I joined a developers community called <b><a target="_blank"
+                                                                 href="https://www.codu.co/">Codú</a></b> in Dublin.
+                </li>
+                <li>
+                    I discovered that I love to teach and share my knowledge with others.
+                </li>
+                <li>
+                    I discovered a special love and passion for mountains.
+                </li>
+            </ul>
+            <Gallery/>
+        </section>
+
+        <!--SECTION - ABOUT HOBBIES-->
+        <section class="container mb-12">
+            <h2>
+                Not everything is about work and coding:
+            </h2>
+            <p>
+                When I’m not in front of a computer, I try to spend as much time outside as possible.
+            </p>
+            <ul>
+                <li>
+                    I love to travel and explore new places.
+                </li>
+                <li>
+                    I love to hike and climb mountains.
+                </li>
+                <li>
+                    I love to take photos and make videos.
+                </li>
+                <li>
+                    I love to read books and listen to music.
+                </li>
+                <li>
+                    Recently, I bought a drone and I'm learning how to fly it.
+                </li>
+            </ul>
+        </section>
+
+        <!--SECTION - GLOBAL MENU-->
+        <section class="container">
+            <Menu transition:name="menulog"
+                  client:only="react"
+                  description="MENU: Select the option you want to know more about me."/>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .in-line {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    img {
+        /*border-radius: 1rem;*/
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: column; /* Default to column for mobile */
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: auto;
+        filter: sepia(1);
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .profile-section {
+            flex-direction: row; /* Change to row for desktop */
+        }
+
+        .profile-picture {
+            width: 300px;
+        }
+    }
+
+    ul li {
+        margin-bottom: 1rem;
+    }
+</style>

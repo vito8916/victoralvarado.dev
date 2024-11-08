@@ -1,53 +1,68 @@
 ---
+import { fade } from 'astro:transitions';
 export interface Props {
     title: string;
     description: string;
     showContact?: boolean;
+    slug?: string;
+    tags?: string[];
 }
 
-const { title, description, showContact } = Astro.props;
-const titles = title.split(" ");
+const {title, description, showContact, slug, tags} = Astro.props;
+let titles = title.split(" ");
+const joinedTitles = titles.slice(0, -1).join(" ");
+const lastTitle = titles[titles.length - 1];
 ---
 <header class="container">
     <div class="header-author">
         <a href="/">
             {
-                titles.length < 2 ? <h1>{titles[0]} <span class="text-gradient">{titles[1]}</span></h1> :
-                        <h1>{`${titles[0]}  ${titles[1]}`} <span class="text-gradient">{titles[titles.length -1]}</span></h1>
+                slug === undefined ? <h1> {joinedTitles} <span class="text-gradient">{lastTitle}</span></h1> :
+                        <h1 transition:name={`title-${slug}`}> {joinedTitles} <span
+                                class="text-gradient"> {lastTitle}</span></h1>
             }
 
         </a>
-        <p>
-            {description}
-        </p>
+        <div>
+            { slug ? <p transition:name={`description-${slug}`}>{description}</p> : <p>{description}</p> }
+        </div>
     </div>
-    { showContact &&
-        <div class="header-contact">
-            <hr class="header-contact-divider">
-            <div class="c-grid">
-                <div class="c-content__body">
-                    <h4 class="label">Location</h4>
-                    <address>
-                        Dublin, Ireland
-                    </address>
-                </div>
-                <div class="c-content__body">
-                    <h4>Linkedin</h4>
-                    <a href="https://www.linkedin.com/in/victor-alvaradohn">@victor-hn</a>
-                </div>
-                <div class="c-content__body">
-                    <h4>Email</h4>
-                    <a href="mailto:victoralvarado.dev@gmail.com">victoralvarado.dev@gmail.com</a>
+    {showContact &&
+            <div class="header-contact">
+                <hr class="header-contact-divider">
+                <div class="c-grid">
+                    <div class="c-content__body">
+                        <h4 class="label">Location</h4>
+                        <address>
+                            Dublin, Ireland
+                        </address>
+                    </div>
+                    <div class="c-content__body">
+                        <h4>Linkedin</h4>
+                        <a target="_blank" href="https://www.linkedin.com/in/victor-alvaradohn">@victor-hn</a>
+                    </div>
+                    <div class="c-content__body">
+                        <h4>Email</h4>
+                        <a href="mailto:victoralvarado.dev@gmail.com">victoralvarado.dev@gmail.com</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+    {showContact === false && tags &&
+            <div class="tags" transition:animate={fade({ duration: '0.5s' })}>
+                {
+                    tags.map((tag) => (
+                            <span class="tag">{tag}</span>
+                    ))
+                }
+            </div>
     }
 </header>
 
 <style>
     header {
         width: 100%;
-        margin-bottom: var(--spacing-xxl);
+        margin-bottom: var(--spacing-xl);
         color: var(--color-text);
     }
 
@@ -102,5 +117,19 @@ const titles = title.split(" ");
         margin-top: 0;
     }
 
+    .tags {
+        overflow-x: scroll;
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
 
+    .tags .tag {
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
 </style>

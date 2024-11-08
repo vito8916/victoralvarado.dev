@@ -1,24 +1,23 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type {CollectionEntry} from 'astro:content';
 import formatDatetime from '../utils/formatDatetime.js';
 
 interface Props {
     work: CollectionEntry<'work'>;
 }
 
-const { data, slug } = Astro.props.work;
-
+const {data, slug} = Astro.props.work;
 ---
 
 <div class="work">
     <div class="work-info">
         <small class="work-timeframe">
-            {formatDatetime(data.date)} – { data.endDate !== undefined ? formatDatetime(data.endDate) : 'Present'}
+            {formatDatetime(data.date)} – {data.endDate !== undefined ? formatDatetime(data.endDate) : 'Present'}
         </small>
-        <h3 class="work-position">
+        <h3 class="work-position" transition:name={`title-${slug}`}>
             {data.position}
         </h3>
-        <small class="work-company">
+        <small class="work-company" transition:name={`description-${slug}`}>
             At {data.company}
         </small> <br/>
         <small class="work-location">
@@ -26,9 +25,11 @@ const { data, slug } = Astro.props.work;
         </small>
     </div>
     <div>
-        <p class="work-description">
+        <p class="work-description" transition:name={`cont-${slug}`}>
             {data.description}
-            <a href= {`/work/${slug}/`}>Read More</a>
+            {data.showLink && (
+                    <a href={`/work/${slug}/`}>Read More</a>
+            )}
         </p>
 
     </div>
@@ -39,10 +40,12 @@ const { data, slug } = Astro.props.work;
     .work {
         margin-bottom: var(--spacing-l);
     }
+
     .work-position {
         font-size: 1.1rem;
         margin: 0;
     }
+
     .work-company {
         color: var(--color-titles);
     }
@@ -53,8 +56,12 @@ const { data, slug } = Astro.props.work;
             grid-template-columns: clamp(8em, 20vw, var(--spacing-col)) 1fr;
             align-items: baseline;
             margin-bottom: var(--spacing-s);
+            gap: 1rem;
         }
-        .work .work_date { margin: 0; }
+
+        .work .work_date {
+            margin: 0;
+        }
     }
 
     small {

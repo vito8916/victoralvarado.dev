@@ -28,7 +28,9 @@ const { data, slug } = Astro.props.coll;
     <div>
         <p class="work-description">
             {data.description}
-            <a href= {`/projects/${slug}/`}>Read More</a>
+            {data.showLink && (
+                    <a href={`/work/${slug}/`}>Read More</a>
+            )}
         </p>
 
     </div>
@@ -53,6 +55,7 @@ const { data, slug } = Astro.props.coll;
             grid-template-columns: clamp(8em, 20vw, var(--spacing-col)) 1fr;
             align-items: baseline;
             margin-bottom: var(--spacing-s);
+            gap: 1rem;
         }
         .work .work_date { margin: 0; }
     }

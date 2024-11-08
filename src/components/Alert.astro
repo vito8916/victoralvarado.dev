@@ -1,0 +1,32 @@
+---
+
+---
+<div class="alert-container">
+    <p class="alert-text">
+        <span style="color:rgba(248, 226, 164, 0.93)">Disclaimer:</span> Content in progress. I'm still working on the story telling of some sections. Please be patient.
+    </p>
+</div>
+
+<style>
+    .alert-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 100%;
+        padding: 1rem;
+        border: 1px solid #3f3f3f;
+        border-radius: 0.375rem;
+        transition: all 0.3s;
+    }
+
+    .alert-container:hover {
+        /*transform: translateY(-0.5rem);*/
+        border-color: rgba(248, 226, 164, 0.93);
+    }
+
+    .alert-text {
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>

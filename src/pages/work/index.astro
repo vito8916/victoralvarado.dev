@@ -1,0 +1,56 @@
+---
+import WorkPreview from "../../components/WorkPreview.astro";
+import {getCollection} from "astro:content";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import Menu from "../../components/Menu.jsx";
+import EducationPreview from "../../components/EducationPreview.astro";
+import Alert from "../../components/Alert.astro";
+// Content Fetching: List four most recent work projects
+const works = (await getCollection('work')).sort(
+    (a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
+
+// Content Fetching: List four most recent work projects
+const educations = (await getCollection('education')).sort(
+    (a: any, b: any) => b.data.date.valueOf() - a.data.date.valueOf())
+---
+
+<Layout title="Victor Alvarado | My Work Experience">
+    <Header title="My Career" description=" This is my work experience over the years." showContact={false}/>
+    <main>
+        <!--Work Experience Section-->
+        <section class="container border-bottom">
+            <Alert />
+            <h2>
+                Work Experience
+            </h2>
+
+            {
+                works.map((work) => (
+                        <WorkPreview work={work}/>
+                ))
+            }
+        </section>
+
+        <section class="container border-bottom">
+            <h2>
+                Education
+            </h2>
+            {
+                educations.map((education) => (
+                        <EducationPreview coll={education}/>
+                ))
+            }
+        </section>
+
+        <!--related menu options-->
+        <section class="container">
+            <Menu
+                    transition:name="menulog"
+                    client:only="react"
+                    description={"Maybe you could be interested in knowing more about my work experience, my education, or my personal\n" +
+                        "                projects."}
+            />
+        </section>
+    </main>
+</Layout>

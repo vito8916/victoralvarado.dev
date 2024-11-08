@@ -2,6 +2,7 @@
 import { getCollection, CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
+import ContentPreview from "../../components/ContentPreview.astro";
 
 export async function getStaticPaths() {
     const educations = await getCollection("education");
@@ -24,24 +25,6 @@ const allPosts = await getCollection("education");
 
 ---
 
-<Layout>
-    <div class="container">
-        <div class="breadcrumbs-section">
-            <a class="" onclick="history.back()">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                ><path
-                        d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-                ></path>
-                </svg><span>Go back</span>
-            </a>
-        </div>
-    </div>
-    <Header title={education.data.position} description={"at " + education.data.company} showContact={false}/>
-    <main>
-        <section class="container">
-            <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-                <Content />
-            </article>
-        </section>
-    </main>
+<Layout title={`Victor Alvarado | ${education.data.position}`}>
+    <ContentPreview entry={education} Content={Content}/>
 </Layout>

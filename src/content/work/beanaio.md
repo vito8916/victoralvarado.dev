@@ -1,6 +1,6 @@
 ---
 title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
-position: Lead Frontend Engineer
+position: Lead-Frontend Engineer
 location: Tegucigalpa, Honduras
 date: 2018-01-17
 endDate: 2020-03-10
@@ -10,6 +10,7 @@ tags:
   - Dev
   - React
   - Backend
+showLink: true
 ---
 
 ## From Pixels to Apps: My Journey as a FrontEnd & Android Developer

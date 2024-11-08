@@ -1,15 +1,16 @@
 ---
 title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
-position: Full Stack Engineer
+position: Full-Stack Engineer
 location: Tegucigalpa, Honduras
-date: 2017-01-17
-endDate: 2018-03-10
+date: 2017-03-17
+endDate: 2018-01-10
 company: PaperSoft
-description: Develop an application for the A.M.D.C of Honduras to register more than 1,000 businesses related to hazardous waste. Thanks to this application, it was possible to analyze the information obtained and conclude that only 30% of the businesses made correct use of toxic waste....
+description: Develop an application for the town hall of Tegucigalpa, Honduras to register more than 1,000 businesses related to hazardous waste. Thanks to this application, it was possible to analyze the information obtained and conclude that only 30% of the businesses made correct use of toxic waste....
 tags:
   - Dev
   - React
   - Backend
+showLink: true
 ---
 
 ## Harnessing Tech for Environmental Impact: My Full-Stack Developer Journey
@@ -17,7 +18,7 @@ tags:
 In the realm of Full-Stack Development, my journey has been both diverse and impactful. From creating mobile applications to designing data-rich dashboards, I've worked to bring about meaningful change, particularly in the area of environmental conservation in Honduras.
 
 ## Mobilizing Environmental Awareness with Android
-For the A.M.D.C of Honduras, I embarked on a project that was close to my heart. I developed an Android application dedicated to registering over 3,000 businesses related to hazardous waste management. This wasn't just a directory; it was a testament to the growing awareness and need for better waste management practices.
+For the town hall of Tegucigalpa, Honduras, I embarked on a project that was close to my heart. I developed an Android application dedicated to registering over 3,000 businesses related to hazardous waste management. This wasn't just a directory; it was a testament to the growing awareness and need for better waste management practices.
 
 ## Unveiling the Stark Reality through Data
 Building on the previous endeavor, I architected a comprehensive dashboard to scrutinize the information collected via the Android survey app. The insights drawn were both enlightening and alarming — only 30% of the businesses were handling toxic waste as per recommended guidelines. This revelation underscored the urgency and importance of educating and enforcing safer waste management practices.

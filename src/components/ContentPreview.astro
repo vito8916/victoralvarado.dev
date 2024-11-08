@@ -14,11 +14,11 @@ const {entry, Content} = Astro.props;
         </a>
     </div>
 </div>
-<Header title={entry.data.position ?? entry.data.title} description={"at " + entry.data.company} showContact={false}/>
+<Header slug={entry.slug} title={entry.data.position ?? entry.data.title} description={"at " + entry.data.company} showContact={false} tags={entry.data.tags}/>
 <main>
     <section class="container">
-        <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-            <Content />
+        <article transition:name={`cont-${entry.slug}`} id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+            <Content/>
         </article>
     </section>
 </main>
@@ -29,5 +29,29 @@ const {entry, Content} = Astro.props;
      }*/
     h2:first-of-type {
         font-size: 1.5rem;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .tag-title-section {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    .tags .tag {
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
     }
 </style>
