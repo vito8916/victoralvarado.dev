@@ -109,6 +109,8 @@ a.disabled, .menu a.disabled {
     pointer-events: none !important;
     cursor: default !important;
     color: gray !important;
+    text-decoration: none !important;
+    display: inline-block;
 }
 
 
