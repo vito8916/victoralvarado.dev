@@ -2,7 +2,11 @@ import React from 'react';
 
 const Menu = (props) => {
     //get the current pathname
-    const pathname = window.location.pathname;
+    let pathname = window.location.pathname;
+    if (pathname !== "/") {
+        pathname = pathname.replace(/\/$/, '');
+    }
+    console.log(pathname);
 
     const menuItems = [
         {
