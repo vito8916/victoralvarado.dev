@@ -98,17 +98,20 @@ a:hover {
     transition: color 0.2s ease-in;
     color: var(--color-text);
 }
-a.disabled {
-    pointer-events: none !important;
-    cursor: default;
-    color:Gray;
-}
 
 a {
     text-underline-offset: 8px;
     text-decoration-style: dashed;
     text-decoration-line: underline;
 }
+
+a.disabled, .menu a.disabled {
+    pointer-events: none !important;
+    cursor: default !important;
+    color: gray !important;
+}
+
+
 
 .text-highlight {
     color: var(--color-highlight);
