@@ -29,7 +29,7 @@ const { data, slug } = Astro.props.coll;
         <p class="work-description" transition:name={`cont-${slug}`}>
             {data.description}
             {data.showLink && (
-                    <a href={`/work/${slug}/`}>Read More</a>
+                    <a href={`/education/${slug}`}>Read More</a>
             )}
         </p>
 

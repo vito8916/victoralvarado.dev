@@ -1,7 +1,7 @@
 ---
 position: Graphic Design
 location: Tegucigalpa, Honduras
-date: 2011-01-17
+date: 2012-01-17
 endDate: 2013-03-10
 company: Level 7 Studios
 description: In the Graphic Design Career, students are trained with all the 
@@ -17,40 +17,35 @@ tags:
 showLink: true
 ---
 
->Una carrrea que me permitió explorar mi creatividad y aprender a integrarla con el desarrollo de software.
+>A career that allowed me to explore my creativity and learn how to integrate it with software development.
 
-## El llamado de lacreatividad y el descubrimiento del diseño
+## The Call of Creativity and the Discovery of Design
 
-Mi aventura en el diseño gráfico comenzó mucho antes de lo que puedo recordar. Desde pequeño, siempre me ha gustado 
-dibujar y crear cosas nuevas, y a medida que fui creciendo, descubrí que la creatividad era una parte fundamental de mi vida.
+My adventure in graphic design began long before I can remember. Since I was a kid, I always loved drawing and creating new things, and as I grew up, I discovered that creativity was a fundamental part of my life.
 
-Recuerdo mis primeros inicios utilizando Paint en Windows XP, y lo divertido que era crear dibujos y formas con tan solo unos clics.
-A medida que fui creciendo, descubrí programas más avanzados como Photoshop, Illustrator, y me di cuenta que existía un mundo entero por explorar.
 
-#### Todo comenzó con Photoshop
+I remember my early days using Paint on Windows XP, and how fun it was to create drawings and shapes with just a few clicks.
+As I grew older, I discovered more advanced programs like Photoshop and Illustrator, and realized there was a whole world to explore.
 
-Cuando descubri que en este software se podian crear fotomontajes y manipular imágenes, empece a experimentar con el y a crear mis propias composiciones.
+#### It All Started with Photoshop
 
-Tiempo despues, editaba fotos para mis amigos, y poco a poco fui perfeccionando mis habilidades en el diseño gráfico.
+When I discovered that you could create photo montages and manipulate images with this software, I started experimenting and creating my own compositions.
 
-#### Momento de decidirse
-Al llegar el momento de empezar mis estudios superiores, y tener algunas dudas sobre que carrera elegir, decidi realizar un 
-diplomado en diseño gráfico, como algo transitorio miestras comenzaba a estudiar Ingeniería en Infotecnología y de paso 
-aprender un poco más sobre diseño gráfico.
+Later on, I edited photos for my friends, and little by little, I improved my graphic design skills.
 
-#### La carrera de diseño gráfico
-Decidí estudiar diseño gráfico en Level 7 Studios, una escuela de diseño gráfico en Tegucigalpa, Honduras. Durante dos años,
-aprendí a utilizar programas como Photoshop, Illustrator, InDesign, y a crear diseños para diferentes medios, como impresos, digitales, y web.
+#### Time to Decide
+When it was time to start my higher education and I had some doubts about which career to choose, I decided to take a diploma in graphic design as something temporary while I started studying Infotechnology Engineering and also to learn a bit more about graphic design.
 
-Al finalizar había descubierto una nueva pasión que me acompañaría en mi camino como ingeniero en Infotecnología.
+#### The Graphic Design Career
+I decided to study graphic design at Level 7 Studios, a design school in Tegucigalpa, Honduras. For two years, I learned to use programs like Photoshop, Illustrator, InDesign, and create designs for different media, like print, digital, and web.
 
-### La unión de la creatividad y la logica
+By the end, I had discovered a new passion that would accompany me on my journey as an Infotechnology Engineer.
 
-El diseño gráfico me enseñó a pensar de manera creativa. Aprendí a comunicar 
-ideas de manera efectiva, y a crear diseños que no solo fueran visualmente atractivos, sino también funcionales.
+### The Union of Creativity and Logic
 
-Esta carrera me permitió explorar mi creatividad y aprender a integrarla con el desarrollo de software, explorando areas como UI y UX, algo que me ha 
-ayudado a ser un mejor ingeniero y a crear productos que no solo sean funcionales, sino tambien hermosos.
+Graphic design taught me to think creatively. I learned to communicate ideas effectively and create designs that are not only visually appealing but also functional.
+
+This career allowed me to explore my creativity and learn how to integrate it with software development, diving into areas like UI and UX, which has helped me become a better engineer and create products that are not only functional but also beautiful.
 
 ---
-Si quieres saber más sobre Level 7 Studios y la carrera de Diseño Gráfico, puedes visitar su [página oficial](https://www.level7studios.com/en/home/#bienvenido).
+If you want to know more about Level 7 Studios and the Graphic Design career, you can visit their [official page](https://www.level7studios.com/en/home/#bienvenido).
