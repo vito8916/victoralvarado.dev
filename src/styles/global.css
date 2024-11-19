@@ -199,7 +199,7 @@ section h2 {
 }
 
 .menu, .menu a {
-    color: var(--color-text);
+    color: rgb(248, 246, 245,1);
 }
 
 .menu-bar {
@@ -219,7 +219,7 @@ section h2 {
     line-height: 1.25rem;
     font-weight: 600;
     --tw-text-opacity: 1;
-    color: rgb(var( --color-text) / var(--tw-text-opacity));
+    color: rgb(248, 246, 245,1);
 }
 
 .menu-bar p, .menu-bar span {
