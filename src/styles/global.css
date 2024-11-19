@@ -198,6 +198,10 @@ section h2 {
     border-radius: 0 0 1rem 1rem;
 }
 
+.menu, .menu a {
+    color: var(--color-text);
+}
+
 .menu-bar {
     display: flex;
     justify-items: center;
