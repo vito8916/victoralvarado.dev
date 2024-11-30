@@ -81,8 +81,12 @@ h6 {
     font-size: 0.875rem;
 }
 
+ul li {
+    margin-bottom: 1rem;
+}
+
 p, ol, ul, span {
-    font-family: var(--font-serif);
+    font-family: var(--font-serif), serif;
     font-weight: normal;
     margin: 1em 0;
     font-size: var(--font-size);
