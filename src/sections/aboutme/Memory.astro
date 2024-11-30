@@ -1,0 +1,29 @@
+---
+import Audio from "@components/Audio.astro";
+import {Image} from "astro:assets";
+import vicAndJose from '@assets/images/about/vic_and_jose_childhood.webp';
+import nudge from '@assets/sounds/003.mp3';
+---
+
+<section class="container mb-12">
+    <h3>A beautiful memory from that time captured in a photo.</h3>
+    <Image src={vicAndJose} alt=""/>
+    <p>
+        In this photo, me and my younger brother were using Microsoft Messenger with an old computer at my
+        aunt's house.
+        Fact: nowadays my brother is a Software Engineer as well.
+    </p>
+    <p>
+        Do you remember Microsoft Messenger and its famous nudge sound? I do, and you could remember it as well.
+    </p>
+    <Audio sound={nudge}/>
+</section>
+
+<style>
+    img {
+        /*border-radius: 1rem;*/
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+</style>
