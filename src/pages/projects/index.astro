@@ -26,14 +26,5 @@ const projects = (await getCollection('projects')).sort(
                 ))
             }
         </section>
-
-        <!--related menu options-->
-        <section class="container">
-            <Menu
-                    client:only="react"
-                    description={"Maybe you could be interested in knowing more about my work experience, my education, or my personal\n" +
-                        "                projects."}
-            />
-        </section>
     </main>
 </Layout>

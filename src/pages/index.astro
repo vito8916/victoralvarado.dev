@@ -14,17 +14,22 @@ import Alert from "../components/Alert.astro";
     <main transition:animate="fade">
         <!--About Me Section-->
         <section class="container">
-            <h2 class="section-title"> Hi there! Welcome to my personal website.</h2>
+            <h2 class="section-title">Hi there! Welcome to my personal website.</h2>
             <Aboutme/>
         </section>
-        <section class="container">
-            <h2 class="section-title">What are you interested in knowing about me?</h2>
+        <!--<section class="container">
+            <h3 class="">
+                At the same time you could explore more using the interactive menu below.
+            </h3>
+            <p>
+                Press a number or just click to select the option you want to know more about.
+            </p>
             <Menu
                     transition:name="menulog"
                     client:only="react"
                     description={"~ % Select the option you want to know more about me."}
             />
-        </section>
+        </section>-->
 
         <section class="container">
             <Alert />
@@ -34,6 +39,6 @@ import Alert from "../components/Alert.astro";
 
 <style>
     .section-title {
-        font-size: 1.2rem;
+        font-size: 1.75rem;
     }
 </style>

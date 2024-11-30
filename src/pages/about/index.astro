@@ -2,14 +2,13 @@
 import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 import Menu from "../../components/Menu.jsx";
-import {Image} from 'astro:assets';
-import vicAndJose from '../../assets/images/about/vic_and_jose_childhood.webp';
-import spAdd from '../../assets/images/about/publi_ingles.webp';
-import spShow from '../../assets/images/about/spaper.gif';
-import vic1 from '../../assets/images/about/vic1.webp';
-import Audio from "../../components/Audio.astro";
-import nudge from '../../assets/sounds/003.mp3';
 import Gallery from "../../components/Gallery.astro";
+import Greeting from "../../sections/aboutme/Greeting.astro";
+import Facts from "../../sections/aboutme/Facts.astro";
+import Memory from "../../sections/aboutme/Memory.astro";
+import SimplyPaper from "../../sections/aboutme/SimplyPaper.astro";
+import Traveling from "../../sections/aboutme/Traveling.astro";
+import Hobbies from "../../sections/aboutme/Hobbies.astro";
 ---
 
 <Layout title="Victor Alvarado | About Me">
@@ -24,229 +23,25 @@ import Gallery from "../../components/Gallery.astro";
             </a>
         </div>
     </div>
-    <Header title="About Me" description=" Welcome to my personal website." showContact={false}/>
-    <main>
+    <Header title="About Me And My Journey" description=" Welcome to my personal website." showContact={false}/>
+    <main class="about">
         <!--SECTION - ABOUT ME AND GREETING -->
-        <section class="container mb-12">
-            <div class="profile-section">
-                <Image class="profile-picture" src={vic1} alt=""/>
-                <div>
-                    <p>
-                        Hi again! I'm Victor Alvarado, a Software Engineer, and Full Stack Developer. I'm from Honduras,
-                        a
-                        small
-                        country in Central America.
-                    </p>
-                    <p>
-                        I've been working as a software engineer for more than 7 years. <!--and I've had the opportunity to work
-                        with many
-                        companies around the world.-->
-                    </p>
-                    <p>In all these years I've learned a lot, I have worked with many languages and technologies. <!--in different
-                        projects, in different areas, and with different teams.-->
-                        I have worked as UI Designer, Frontend Developer, Backend Developer, Android Developer, and Full
-                        Stack
-                        Developer.
-                    </p>
-                </div>
-            </div>
-
-            <p>
-                Yes, I know! Maybe it's too much, but, you know what? I love it.
-                And probably you are wondering, why do I have so many titles? Well, I think that the best way to learn
-                is to do
-                it, and I have always been curious to learn new things.
-                I don't consider my self an expert in any of these areas, but I have a lot of experience in each of
-                them.
-                I have learned a lot from my mistakes, and I have learned a lot from my successes.
-            </p>
-            <p class="text-highlight">
-                But, hey! I know that sometimes we have to settle down and focus on one thing, and that's why I'm
-                currently
-                working
-                as a Full Stack Developer using technologies like <b>Next.Js, Astro Build, FireBase, MongoDB and,
-                MySql</b>.
-            </p>
-        </section>
+        <Greeting />
 
         <!--SECTION - FACTS ABOUT ME-->
-        <section class="container mb-12">
-            <h2>
-                Interesting facts about how I started in this world:
-            </h2>
-            <ul>
-                <li>
-                    My first contact with a computer was at 11 years old.
-                </li>
-                <li>
-                    The first thing I learned was play Age of Empires II.
-                </li>
-                <li>
-                    In 2004, I moved to the city, and that same year we got our first computer at home.
-                </li>
-                <li>
-                    That same year, I took apart a computer for the first time without knowing how to put it back together. Everything turned out fine! :)
-                </li>
-                <li>
-                    I learned how a computer works and how to assemble and disassemble it.
-                </li>
-                <li>
-                    I learned how to install Windows XP and format a computer.
-                </li>
-                <li>
-                    I dedicated myself to repairing the computers of my friends and neighbors.
-                </li>
-                <li>
-                    During the hype of hi5.com, I learned HTML and CSS to customize my profile and my friends' profiles. It could say it was my first encounter with web development.
-                </li>
-                <li>
-                    In 2010, I discovered Linux and fell in love with Ubuntu. I learned everything about it.
-                </li>
-                <li>
-                    In 2011, I started a YouTube channel to share my knowledge about Ubuntu and Linux. Unfortunately, I stopped making videos. :(
-                </li>
-                <li>
-                    In 2012, with the rise of smartphones, I got interested in Android and started collaborating with the XDA Developers community.
-                </li>
-                <li>
-                    In 2012, I studied a diploma in Graphic Design.
-                </li>
-                <li>
-                    In 2013, I started studying Information Technology Engineering at Jose Cecilio Del Valle University.
-                </li>
-            </ul>
-        </section>
+        <Facts />
 
         <!--SECTION - MEMORY PICTURE-->
-        <section class="container mb-12">
-            <h3>A beautiful memory from that time captured in a photo.</h3>
-            <Image src={vicAndJose} alt="" width={1080}/>
-            <p>
-                In this photo, me and my younger brother were using Microsoft Messenger with an old computer at my
-                aunt's house.
-                Fact: nowadays my brother is a Software Engineer as well.
-            </p>
-            <p>
-                Do you remember Microsoft Messenger and its famous nudge sound? I do, and you could remember it as well.
-            </p>
-            <Audio sound={nudge}/>
-        </section>
+        <Memory />
 
         <!--SECTION - SIMPLY PAPER-->
-        <section class="container mb-12">
-            <h2>
-                The breaking changes in my life as a Software Engineer:
-            </h2>
-            <Image src={spAdd} alt="" width={800}/>
-            <p>
-                While I was studying at the university, I fell in love with programming, and I started to learn more
-                about it.
-                I started to learn C++, Java and how to create Android apps, and I started to work on small projects
-                called Simply Paper.
-            </p>
-            <p>
-                Simply Paper was a project where I shared self-made wallpapers for Android devices, and I learned a lot
-                about Android development.
-                This simple application gave me the opportunity to apply for a job as an Android Developer at a local
-                company. After that, my career as a Software Engineer started to grow, and I started to work with many
-                companies
-                around the world
-            </p>
-            <Image src={spShow} alt="" width={800}/>
-            <p>
-                <i>Simply Paper is down now, but I still have the wallpapers hosted on Flickr. You can check them out if
-                    you want.</i>
-            </p>
-            <div class="in-line">
-                <button class="button-custom">
-                    <a target="_blank" href="https://www.flickr.com/photos/134427773@N06/with/25694820412">
-                        Simply Paper Gallery
-                    </a>
-                </button>
-                <button class="button-custom">
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.dev.victor.spaper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.00098 1.73438C4.17692 1.73438 4.34975 1.7808 4.50201 1.86895L20.5061 11.1345C20.9841 11.4112 21.1473 12.023 20.8705 12.501C20.783 12.6522 20.6574 12.7778 20.5061 12.8654L4.50201 22.1309C4.02405 22.4076 3.41226 22.2445 3.13555 21.7665C3.0474 21.6143 3.00098 21.4414 3.00098 21.2655V2.73438C3.00098 2.18209 3.44869 1.73438 4.00098 1.73438ZM12.2931 13.4132L7.79498 17.9124L13.494 14.6134L12.2931 13.4132ZM4.99998 6.11938V17.8784L10.8791 11.9992L4.99998 6.11938ZM15.284 10.4214L13.7071 11.9992L15.285 13.5764L18.009 11.9999L15.284 10.4214ZM7.79398 6.08537L12.2931 10.5852L13.493 9.38437L7.79398 6.08537Z"></path></svg>
-                    </a>
-                </button>
-            </div>
-        </section>
+        <SimplyPaper />
 
         <!--SECTION - ABOUT TRAVEL-->
-        <section class="container mb-12">
-            <h2>
-                The decision that changed my life:
-            </h2>
-            <p>
-                After realized that I was working too much and I was not happy with my life, I decided to move to
-                Dublin, Ireland to improve my English and live new experiences. This journey has changed my life in many
-                ways.
-            </p>
-            <ul class="mb-12">
-                <li>
-                    I improved my English a lot.
-                </li>
-                <li>
-                    I met many wonderful people from different countries.
-                </li>
-                <li>
-                    I learned a lot about different cultures.
-                </li>
-                <li>
-                    I learned a lot about myself.
-                </li>
-                <li>
-                    I learned a lot about life.
-                </li>
-                <li>
-                    I traveled a lot around Europe.
-                </li>
-                <li>
-                    I joined a developers community called <b><a target="_blank"
-                                                                 href="https://www.codu.co/">Codú</a></b> in Dublin.
-                </li>
-                <li>
-                    I discovered that I love to teach and share my knowledge with others.
-                </li>
-                <li>
-                    I discovered a special love and passion for mountains.
-                </li>
-            </ul>
-            <Gallery/>
-        </section>
+        <Traveling />
 
         <!--SECTION - ABOUT HOBBIES-->
-        <section class="container mb-12">
-            <h2>
-                Not everything is about work and coding:
-            </h2>
-            <p>
-                When I’m not in front of a computer, I try to spend as much time outside as possible.
-            </p>
-            <ul>
-                <li>
-                    I love to travel and explore new places.
-                </li>
-                <li>
-                    I love to hike and climb mountains.
-                </li>
-                <li>
-                    I love to take photos and make videos.
-                </li>
-                <li>
-                    I love to read books and listen to music.
-                </li>
-                <li>
-                    Recently, I bought a drone and I'm learning how to fly it.
-                </li>
-            </ul>
-        </section>
-
-        <!--SECTION - GLOBAL MENU-->
-        <section class="container">
-            <Menu transition:name="menulog"
-                  client:only="react"
-                  description="MENU: Select the option you want to know more about me."/>
-        </section>
+        <Hobbies />
     </main>
 </Layout>
 
@@ -256,36 +51,11 @@ import Gallery from "../../components/Gallery.astro";
         gap: 1rem;
         margin-top: 1rem;
     }
-    img {
+    .about img {
         /*border-radius: 1rem;*/
         width: 100%;
         height: auto;
         margin-bottom: 1rem;
-    }
-
-    .profile-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        flex-direction: column; /* Default to column for mobile */
-    }
-
-    .profile-picture {
-        width: 150px;
-        height: auto;
-        filter: sepia(1);
-        margin-bottom: 1rem;
-    }
-
-    @media (min-width: 768px) {
-        .profile-section {
-            flex-direction: row; /* Change to row for desktop */
-        }
-
-        .profile-picture {
-            width: 300px;
-        }
     }
 
     ul li {
