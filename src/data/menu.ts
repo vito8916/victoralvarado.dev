@@ -5,7 +5,7 @@ export const menu = [
     },
     {
         href: '/about',
-        label: 'About Me',
+        label: 'My Story',
     },
     {
         href: '/work',
@@ -13,6 +13,6 @@ export const menu = [
     },
     {
         href: '/projects',
-        label: 'Projects',
+        label: 'My Projects',
     }
 ]
