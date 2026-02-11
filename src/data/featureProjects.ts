@@ -8,22 +8,22 @@ export interface FeatureProject {
 export const featureProjects: FeatureProject[] = [
 	{
 		title: 'RulesForAI.app',
-		description: 'A web app that helps you create rules for AI agents to follow.',
+		description: 'Generates structured rules for AI coding agents to improve output quality and consistency.',
 		externalUrl: 'https://rulesforai.app',
 	},
 	{
 		title: 'BpFairValue.com',
-		description: 'A website that helps you calculate the fair value of a company.',
+		description: 'SaaS platform for fair value analysis and decision support for stock investors.',
 		externalUrl: 'https://bpfairvalue.com',
 	},
 	{
 		title: 'TheClosetClique.com',
-		description: 'A website that helps you find the perfect outfit for any occasion.',
+		description: 'Student-focused fashion marketplace for renting and reselling clothing.',
 		externalUrl: 'https://theclosetclique.com',
 	},
 	{	
 		title: 'SupaNext Starter Template',
-		description: 'A starter template for Next.js and Supabase projects.',
+		description: 'Production-ready Next.js + Supabase starter to ship secure SaaS apps faster',
 		externalUrl: 'https://supabase-nextjs-starter-template.vercel.app/',
 	},
 ];

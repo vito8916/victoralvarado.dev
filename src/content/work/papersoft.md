@@ -1,15 +1,20 @@
 ---
 title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
-position: Full-Stack Engineer
+position: Full-Stack Developer
 location: Tegucigalpa, Honduras
 date: 2017-03-17
 endDate: 2018-01-10
 company: PaperSoft
-description: Develop an application for the town hall of Tegucigalpa, Honduras to register more than 1,000 businesses related to hazardous waste. Thanks to this application, it was possible to analyze the information obtained and conclude that only 30% of the businesses made correct use of toxic waste....
+description: I developed a public-sector platform for environmental compliance and business registration.
+bullets:
+  - Built an application for the Tegucigalpa municipality to register 1,000+ businesses handling hazardous waste.
+  - Enabled data analysis workflows that identified critical compliance gaps (only ~30% meeting proper toxic waste handling practices).
+  - Developed integrated web and mobile tools to monitor cargo routes and fuel efficiency.
 tags:
-  - Dev
-  - React
-  - Backend
+  - PHP
+  - MySQL
+  - Android (native)
+  - JavaScript/TypeScript
 showLink: true
 ---
 

@@ -5,11 +5,15 @@ location: Tegucigalpa, Honduras
 date: 2018-01-17
 endDate: 2020-03-10
 company: Beanario Software
-description: I led a team of 3 engineers supporting them with their projects. I worked as outsource in a major national bank. Also, I developed native applications for Android and was part of the creation and launch stage of a delivery startup.
+description: I led frontend delivery across client projects in fintech, mobile, and startup environments.
+bullets:
+  - Led a team of 3 engineers, supporting implementation quality, delivery planning, and technical decision-making.
+  - Worked with one of the country’s largest banking institutions in an outsourced engineering role.
+  - Built native Android applications and contributed to the early product definition and launch of a delivery startup.
 tags:
-  - Dev
-  - React
-  - Backend
+  - React/Frontend stack, 
+  - Android (native), 
+  - JavaScript/TypeScript
 showLink: true
 ---
 

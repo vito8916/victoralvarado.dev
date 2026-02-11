@@ -26,7 +26,14 @@ const {data, slug} = Astro.props.work;
     </div>
     <div>
         <p class="work-description" transition:name={`cont-${slug}`}>
-            {data.description}
+            {data.description} <br/>
+            {data.bullets && (
+                <ul class="bullets">
+                    {data.bullets.map((bullet) => (
+                        <li>{bullet}</li>
+                    ))}
+                </ul>
+            )}
             {data.showLink && (
                     <a href={`/work/${slug}/`}>Read More</a>
             )}
@@ -53,9 +60,9 @@ const {data, slug} = Astro.props.work;
     @media (min-width: 600px) {
         .work {
             display: grid;
-            grid-template-columns: clamp(8em, 20vw, var(--spacing-col)) 1fr;
+            grid-column: 1fr;
             align-items: baseline;
-            margin-bottom: var(--spacing-s);
+            margin-bottom: var(--spacing-l);
             gap: 1rem;
         }
 
@@ -66,5 +73,13 @@ const {data, slug} = Astro.props.work;
 
     small {
         margin-top: var(--spacing-s);
+    }
+    .bullets {
+        font-size: var(--font-s);
+        /*padding-left: var(--spacing-l);*/
+        list-style-type: disc;
+    }
+    .bullets li {
+        margin-bottom: var(--spacing-s);
     }
 </style>

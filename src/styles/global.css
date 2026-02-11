@@ -9,9 +9,13 @@
     --font-serif: "Roboto Mono", monospace;
     --font-size: 16px;
     --font-s: 14px;
+    --font-xs: 12px;
+    --font-xxs: 10px;
     --font-size-l: 18px;
     --spacing: 1.5em;
     --spacing-s: calc(0.5 * var(--spacing));
+    --spacing-xs: calc(0.25 * var(--spacing));
+    --spacing-xxs: calc(0.125 * var(--spacing));
     --spacing-m: var(--spacing);
     --spacing-l: calc(1.5 * var(--spacing));
     --spacing-xl: calc(2.5 * var(--spacing));

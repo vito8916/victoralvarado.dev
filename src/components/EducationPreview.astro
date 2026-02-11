@@ -27,7 +27,14 @@ const { data, slug } = Astro.props.coll;
     </div>
     <div>
         <p class="work-description" transition:name={`cont-${slug}`}>
-            {data.description}
+            {data.description} <br/>
+            {data.bullets && (
+                <ul class="bullets">
+                    {data.bullets.map((bullet) => (
+                        <li>{bullet}</li>
+                    ))}
+                </ul>
+            )}
             {data.showLink && (
                     <a href={`/education/${slug}`}>Read More</a>
             )}
@@ -66,5 +73,11 @@ const { data, slug } = Astro.props.coll;
 
     small {
         margin-top: var(--spacing-s);
+    }
+    .bullets {
+        font-size: var(--font-xs);
+        margin-top: var(--spacing-xs);
+        margin-left: var(--spacing-xs);
+        list-style-type: disc;
     }
 </style>
