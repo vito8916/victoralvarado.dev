@@ -5,11 +5,11 @@ export const menu = [
     },
     {
         href: '/about',
-        label: 'My Story',
+        label: 'About',
     },
     {
         href: '/work',
-        label: 'My Career',
+        label: 'Experience',
     },
     {
         href: '/projects',

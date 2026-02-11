@@ -1,28 +1,95 @@
+---
+import Alert from "./Alert.astro";
+---
+<!-- Hero Section -->
+<p class="mt-6">
+	Building web and mobile products that solve real business problems. 
+    I've worked across product design, full-stack development,
+	and AI integrations — helping teams ship faster, reduce infrastructure
+	costs, and launch scalable platforms used by thousands of people.
+</p>
 <p>
-    building web and mobile products that solve real business problems.
-
-Over the past 9+ years, I’ve worked across product design, full-stack development, and AI integrations — helping teams ship faster, reduce infrastructure costs, and launch scalable platforms used by thousands of people.
-
-I specialize in Next.js, React, Astro, Supabase, and practical AI workflows that improve delivery without adding unnecessary complexity.
+	I specialize in Next.js, React, Astro, Supabase, and practical AI workflows
+	that improve delivery without adding unnecessary complexity.
 </p>
 
+<!-- Trust Line -->
+<Alert/>
 
-<h2 class="section-title">
-    What I do
-</h2>
+
+<!-- What I do Section -->
+<h2 class="section-title">What I do</h2>
 <p>
-    I help companies turn product ideas into reliable software that users actually adopt.
-I work across UX thinking, architecture, and implementation — with a strong focus on performance, maintainability, and business impact.
+	I help teams move from idea to production with clear product thinking, solid architecture, and reliable execution.
 </p>
 <ul>
-    <li><strong>Product Engineering:</strong> From 0 to 1 MVP to scaling production systems    </li>
-    <li><strong>Full-Stack Development:</strong> Next.js, React, Astro, Node.js, Supabase    </li>
-    <li><strong>AI Enablement:</strong> Practical integrations and workflows to improve team velocity    </li>
-    <li><strong>Design-to-Code Execution:</strong> Translating product requirements into polished, usable interfaces   </li>
+	<li>
+		<strong>Product Engineering:</strong> From 0 to 1 MVP to scaling production systems
+	</li>
+	<li>
+		<strong>Full-Stack Development:</strong> Next.js, React, Astro, Node.js, Supabase
+	</li>
+	<li>
+		<strong>AI Enablement:</strong> Practical integrations and workflows to improve
+		team velocity
+	</li>
+	<li>
+		<strong>Design-to-Code Execution:</strong> Translating product requirements
+		into polished, usable interfaces
+	</li>
 </ul>
 
-<h2>
-    Tech Focus
-</h2>
+<!-- Metrics that matter Section -->
+<h2 class="section-title">Metrics that matter</h2>
 <p>
-    Next.js · React · Astro · TypeScript · Supabase · PostgreSQL · Tailwind · shadcn/ui · Stripe</p>
+	My focus is on delivering value that drives measurable business impact.
+</p>
+<ul>
+	<li>
+		9+ years experience.
+	</li>
+	<li>
+		40% faster internal workflows with AI integrations and internal tools/templates for qickly starting new projects.
+	</li>
+	<li>
+		95% cost reduction by reducing the over-engineering of the infrastructure.
+	</li>
+</ul>
+
+<!-- Tech Focus Section -->
+<h2>Tech Focus</h2>
+<p>
+	Next.js · React · Astro · TypeScript · Supabase · PostgreSQL · Tailwind ·
+	shadcn/ui · Stripe
+</p>
+
+<style>
+	.hero-ctas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing);
+		margin-top: var(--spacing-l);
+		margin-bottom: var(--spacing-l);
+	}
+
+	.cta {
+        text-decoration: none;
+		display: inline-block;
+		transition: opacity 0.2s, transform 0.2s;
+	}
+
+	.cta:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
+	}
+
+	.cta-primary {
+		color:var(--color-primary);;
+        border-bottom: 1px solid var(--color-primary);
+	}
+
+	.cta-secondary {
+		color: var(--color-text);
+        border-bottom: 1px solid var(--color-text);
+	}
+</style>

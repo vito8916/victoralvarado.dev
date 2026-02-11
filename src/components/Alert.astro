@@ -1,32 +1,29 @@
----
-
----
-<div class="alert-container">
-    <p class="alert-text">
-        <span style="color:rgb(221 171 30 / 93%);">Disclaimer:</span> Content in progress. I'm still working on the story telling of some sections. Please be patient.
-    </p>
+<div class="trust-line container">
+	<span class="trust-line-dot" aria-hidden="true"></span>
+	<span class="trust-line-text">Available for senior product/full-stack roles and consulting projects.</span>
+    <a href="https://cal.com/victor-alvarado-8fq1zq/30min" class="cta cta-secondary" target="_blank">Book a call</a>
 </div>
 
 <style>
-    .alert-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        max-width: 100%;
-        padding: 1rem;
-        border: 1px solid #3f3f3f;
-        border-radius: 0.375rem;
-        transition: all 0.3s;
-    }
+	.trust-line {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 0;
+		margin-bottom: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--color-text);
+	}
 
-    .alert-container:hover {
-        /*transform: translateY(-0.5rem);*/
-        border-color: rgba(248, 226, 164, 0.93);
-    }
+	.trust-line-dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background-color: var(--color-primary);
+		flex-shrink: 0;
+	}
 
-    .alert-text {
-        white-space: wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+	.trust-line-text {
+		opacity: 0.9;
+	}
 </style>

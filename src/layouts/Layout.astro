@@ -5,7 +5,6 @@ import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 import "@fontsource/roboto-mono"
 import {SITE} from "../config";
-import FloatingDockMenu from "../components/FloatingDockMenu.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 export interface Props {
@@ -18,7 +17,6 @@ const { title } = Astro.props;
 const {
 	author = SITE.author,
 	description = SITE.desc,
-	ogImage = SITE.ogImage,
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -54,7 +52,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta property="twitter:url" content={Astro.url} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={ogImage} />
 
 		<ViewTransitions />
 	</head>
