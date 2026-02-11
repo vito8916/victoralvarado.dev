@@ -11,8 +11,4 @@ export const menu = [
         href: '/work',
         label: 'Experience',
     },
-    {
-        href: '/projects',
-        label: 'My Projects',
-    }
 ]
