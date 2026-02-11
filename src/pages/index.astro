@@ -9,30 +9,12 @@ import Alert from "../components/Alert.astro";
 
 <Layout title="Victor Alvarado | Software Engineer">
     <!--Header-->
-    <Header title="Victor Alvarado" description="SWE &amp; Full Stack Developer" showContact={true}/>
+    <Header title="Victor Alvarado" description="Senior Product Engineer | Full-Stack AI Engineer" showContact={false}/>
     <!--Main Content Wrapper-->
     <main transition:animate="fade">
         <!--About Me Section-->
         <section class="container">
-            <h2 class="section-title">Hi there! Welcome to my personal website.</h2>
             <Aboutme/>
-        </section>
-        <!--<section class="container">
-            <h3 class="">
-                At the same time you could explore more using the interactive menu below.
-            </h3>
-            <p>
-                Press a number or just click to select the option you want to know more about.
-            </p>
-            <Menu
-                    transition:name="menulog"
-                    client:only="react"
-                    description={"~ % Select the option you want to know more about me."}
-            />
-        </section>-->
-
-        <section class="container">
-            <Alert />
         </section>
     </main>
 </Layout>
