@@ -3,7 +3,7 @@
     --color-highlight: #1a1a1a;
     --color-text: #333333;
     --color-titles: #1a1a1a;
-    --color-primary: #00a651;
+    --color-primary: #00ffff;
 
     --font-sans: "Roboto Mono", monospace;
     --font-serif: "Roboto Mono", monospace;
@@ -31,7 +31,7 @@
         --color-highlight: #e3e3e3;
         --color-text: #afadad;
         --color-titles: #e3e3e3;
-        --color-primary: #00a651;
+        --color-primary: #00ffff;
     }
 }
 html {
@@ -53,7 +53,7 @@ address {
     font-style: normal;
 }
 b {
-    color: #00a651;
+    color: var(--color-primary);
 }
 h1 {
     font-size: 2rem;
@@ -258,8 +258,8 @@ button {
 }
 
 .button-custom {
-    color: white;
-    background-color: #03a651;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
     font-weight: 500; /* font-medium */
     border-radius: 0.5rem; /* rounded-lg */
     font-size: 0.875rem; /* text-sm */
@@ -270,17 +270,17 @@ button {
 }
 
 .button-custom:hover {
-    background-color: #038e45; /* hover:bg-blue-800 */
+    background-color: color-mix(in oklab, var(--color-primary) 80%, transparent); /* hover:bg-blue-800 */
 }
 
 .button-custom:focus {
     ring: 4px; /* focus:ring-4 */
-    ring-color: #05cf66; /* focus:ring-blue-300 */
+    ring-color: color-mix(in oklab, var(--color-primary) 80%, transparent); /* focus:ring-blue-300 */
 }
 
 .button-custom a {
     text-decoration: none;
-    color: white;
+    color: var(--color-bg);
     font-weight: bold;
 }
 
