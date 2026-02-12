@@ -36,12 +36,6 @@ const linkUrl = data.links?.live ?? data.links?.github ?? null;
         <p class="work-description" transition:name={`cont-${slug}`}>
             {data.excerpt}
             <a href={`/projects/${slug}/`}>Read case study</a>
-            {linkUrl && (
-                <>
-                    {' · '}
-                    <a href={linkUrl} target="_blank" rel="noopener noreferrer">View live →</a>
-                </>
-            )}
         </p>
     </div>
 </div>
@@ -58,6 +52,10 @@ const linkUrl = data.links?.live ?? data.links?.github ?? null;
 
     .work-company {
         color: var(--color-titles);
+    }
+    .work-description {
+        font-size: 1rem;
+        margin: 0;
     }
 
     @media (min-width: 600px) {
