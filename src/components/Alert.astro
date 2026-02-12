@@ -1,29 +1,52 @@
 <div class="trust-line container">
 	<span class="trust-line-dot" aria-hidden="true"></span>
-	<span class="trust-line-text">Available for senior product/full-stack roles and consulting projects.</span>
-    <a href="https://cal.com/victor-alvarado-8fq1zq/30min" class="cta cta-secondary" target="_blank">Book a call</a>
+	<div class="trust-line-container">
+		<span class="text-sm">
+			<span class="font-medium">Available for senior full-stack/product engineer roles and consulting projects.</span>
+			<span class="text-muted-foreground">
+				<a href="https://cal.com/victor-alvarado-8fq1zq/30min"
+					class="underline underline-offset-2 hover:text-foreground"
+					target="_blank">Book a call
+				</a>
+				</span>
+		</span>
+	</div>
 </div>
 
 <style>
 	.trust-line {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
 		padding: 0.5rem 0;
 		margin-bottom: 0.5rem;
-		font-size: 0.875rem;
+		font-size: 0.95rem;
 		color: var(--color-text);
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.trust-line-container {
+		display: flex;
+		align-items: center;
+		flex: 1;
 	}
 
 	.trust-line-dot {
 		width: 0.5rem;
 		height: 0.5rem;
+		margin-right: 0.5rem;
 		border-radius: 50%;
 		background-color: var(--color-primary);
-		flex-shrink: 0;
 	}
 
 	.trust-line-text {
 		opacity: 0.9;
+		margin-right: 0.5rem;
+	}
+
+	.trust-line .cta {
+		white-space: nowrap;
 	}
 </style>

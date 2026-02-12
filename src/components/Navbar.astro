@@ -11,7 +11,7 @@ import {menu} from "../data/menu";
     </a>
 
     <nav role="navigation">
-        <ul role="list" class="gap-2">
+        <ul role="list">
             {
                 menu.map((item) => (
                     <li>
@@ -33,7 +33,8 @@ import {menu} from "../data/menu";
 
     ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 0.5rem;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -45,8 +46,8 @@ import {menu} from "../data/menu";
 
     ul li:before {
         content: "•";
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
     }
 
     ul a {
@@ -72,14 +73,9 @@ import {menu} from "../data/menu";
             flex-direction: row;
         }
         ul li:before {
-            content: "";
+            content: "•";
             margin-left: 0;
             margin-right: 0;
-        }
-        ul li:after {
-            content: "•";
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
         }
         ul li:last-child:after {
             content: "";
