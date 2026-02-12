@@ -1,27 +1,25 @@
 ---
-import {getCollection, CollectionEntry} from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
 import ContentPreview from "../../components/ContentPreview.astro";
 
 interface Props {
-    projects: CollectionEntry<"projects">;
+    project: CollectionEntry<"projects">;
 }
+
 export async function getStaticPaths() {
-    const projects = await getCollection("projects");
+    const projects = await getCollection("projects", ({ data }) => !data.draft);
 
     return projects.map((project) => ({
-        params: {slug: project.slug},
-        props: {
-            project,
-        },
+        params: { slug: project.slug },
+        props: { project },
     }));
 }
 
-const {project} = Astro.props;
-const {Content} = await project.render();
+const { project } = Astro.props;
+const { Content } = await project.render();
 ---
 
-<Layout title="Projects | Victor Alvarado">
+<Layout title={`${project.data.title} | Victor Alvarado`} description={project.data.description}>
     <ContentPreview entry={project} Content={Content} />
 </Layout>

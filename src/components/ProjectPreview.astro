@@ -8,43 +8,54 @@ interface Props {
 
 const { data, slug } = Astro.props.coll;
 
+const timeframe = data.timeline ?? formatDatetime(data.publishDate);
+const linkUrl = data.links?.live ?? data.links?.github ?? null;
 ---
 
 <div class="work">
     <div class="work-info">
         <small class="work-timeframe">
-            {formatDatetime(data.startDate)} – { data.endDate !== undefined ? formatDatetime(data.endDate) : 'Present'}
+            {timeframe}
         </small>
-        <h3 class="work-position">
+        <h3 class="work-position" transition:name={`title-${slug}`}>
             {data.title}
         </h3>
-        <small class="work-company">
-            At {data.company}
-        </small> <br/>
-        <small class="work-location">
-            {data.title}
+        <small class="work-company" transition:name={`description-${slug}`}>
+            {data.company ? `At ${data.company}` : data.myRole}
         </small>
+        {(data.industry || data.engagementType) && (
+            <>
+                <br/>
+                <small class="work-location">
+                    {[data.industry, data.engagementType].filter(Boolean).join(' · ')}
+                </small>
+            </>
+        )}
     </div>
     <div>
-        <p class="work-description">
-            {data.description}
-            {data.showLink && (
-                    <a href={`/work/${slug}/`}>Read More</a>
+        <p class="work-description" transition:name={`cont-${slug}`}>
+            {data.excerpt}
+            <a href={`/projects/${slug}/`}>Read case study</a>
+            {linkUrl && (
+                <>
+                    {' · '}
+                    <a href={linkUrl} target="_blank" rel="noopener noreferrer">View live →</a>
+                </>
             )}
         </p>
-
     </div>
 </div>
 
 <style>
-
     .work {
         margin-bottom: var(--spacing-l);
     }
+
     .work-position {
         font-size: 1.5rem;
         margin: 0;
     }
+
     .work-company {
         color: var(--color-titles);
     }
@@ -52,12 +63,15 @@ const { data, slug } = Astro.props.coll;
     @media (min-width: 600px) {
         .work {
             display: grid;
-            grid-template-columns: clamp(8em, 20vw, var(--spacing-col)) 1fr;
+            grid-column: 1fr;
             align-items: baseline;
-            margin-bottom: var(--spacing-s);
+            margin-bottom: var(--spacing-l);
             gap: 1rem;
         }
-        .work .work_date { margin: 0; }
+
+        .work .work_date {
+            margin: 0;
+        }
     }
 
     small {

@@ -8,8 +8,8 @@ import Menu from "../../components/Menu.jsx";
 import Alert from "../../components/Alert.astro";
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection('projects')).sort(
-    (a: any, b: any) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
+const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+    (a: any, b: any) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 ---
 
 <Layout title="Victor Alvarado | My Projects">

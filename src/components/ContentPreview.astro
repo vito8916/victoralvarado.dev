@@ -14,7 +14,7 @@ const {entry, Content} = Astro.props;
         </a>
     </div>
 </div>
-<Header slug={entry.slug} title={entry.data.position ?? entry.data.title} description={"at " + entry.data.company} showContact={false} tags={entry.data.tags}/>
+<Header slug={entry.slug} title={entry.data.position ?? entry.data.title} description={entry.data.company ? `at ${entry.data.company}` : (entry.data.myRole ?? entry.data.description ?? "")} showContact={false} tags={entry.data.tags}/>
 <main>
     <section class="container">
         <article transition:name={`cont-${entry.slug}`} id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
@@ -48,7 +48,7 @@ const {entry, Content} = Astro.props;
     }
     .tags .tag {
         background-color: var(--color-primary);
-        color: #fff;
+        color: var(--color-bg);
         padding: 0.25rem 0.5rem;
         border-radius: 0.25rem;
         font-size: 0.75rem;
