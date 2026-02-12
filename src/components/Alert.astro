@@ -1,12 +1,11 @@
 <div class="trust-line container">
 	<span class="trust-line-dot" aria-hidden="true"></span>
 	<div class="trust-line-container">
-		<span class="text-sm">
-			<span class="font-medium">Available for senior full-stack/product engineer roles and consulting projects.</span>
-			<span class="text-muted-foreground">
+		<span class="trust-line-text-container">
+			<span class="trust-line-text">Available for senior full-stack/product engineer roles and consulting projects.</span>
+			<span class="trust-line-cta-container">
 				<a href="https://cal.com/victor-alvarado-8fq1zq/30min"
-					class="underline underline-offset-2 hover:text-foreground"
-					target="_blank">Book a call
+					target="_blank" class="trust-line-cta">Book a call
 				</a>
 				</span>
 		</span>
@@ -48,5 +47,13 @@
 
 	.trust-line .cta {
 		white-space: nowrap;
+	}
+	@media (max-width: 600px) {
+		.trust-line-text {
+			font-size: var(--font-s);
+		}
+		.trust-line-cta {
+			font-size: var(--font-s);
+		}
 	}
 </style>

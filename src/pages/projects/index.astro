@@ -15,9 +15,7 @@ const projects = (await getCollection('projects', ({ data }) => !data.draft)).so
 <Layout title="Victor Alvarado | My Projects">
     <Header title="My Personal Projects" description=" This is a compilation of some of the projects I have worked on, both personal and for others.." showContact={false}/>
     <main>
-        <section class="container">
-            <Alert />
-        </section>
+        <Alert />
         <!--Projects Section-->
         <section class="container border-bottom">
             {

@@ -158,25 +158,19 @@ const lastTitle = titles[titles.length - 1];
 		grid-gap: var(--spacing);
 	}
 
-	@media (min-width: 600px) {
-		header .header-contact .c-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
 	.c-content__body h4 {
 		margin-bottom: var(--spacing-s);
 		margin-top: 0;
 	}
 
 	header h1 {
-		font-size: 3rem;
+		font-size: 2rem;
 		margin-bottom: 0;
 		margin-top: 0;
 	}
 
 	header h1 span {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	header a {
@@ -203,6 +197,7 @@ const lastTitle = titles[titles.length - 1];
 		border-radius: 0.25rem;
 		font-size: 0.75rem;
 		font-weight: 600;
+		text-wrap-mode: nowrap;
 	}
 	.header-socials {
 		display: flex;
@@ -229,5 +224,17 @@ const lastTitle = titles[titles.length - 1];
 		height: 100%;
 		filter: grayscale(100%);
 		object-fit: cover;
+	}
+
+	@media (min-width: 600px) {
+		header h1 {
+			font-size: 3rem;
+		}
+		header h1 span {
+			font-size: 3rem;
+		}
+		header .header-contact .c-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 </style>
