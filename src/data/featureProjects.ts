@@ -22,8 +22,8 @@ export const featureProjects: FeatureProject[] = [
 		externalUrl: 'https://theclosetclique.com',
 	},
 	{	
-		title: 'SupaNext Starter Template',
-		description: 'Production-ready Next.js + Supabase starter to ship secure SaaS apps faster',
-		externalUrl: 'https://supabase-nextjs-starter-template.vercel.app/',
+		title: 'Glove-Safe',
+		description: 'Glove Safe Store — a headless Shopify e-commerce storefront. The frontend is Next.js 16 (App Router, React 19) consuming the Shopify Storefront GraphQL API.',
+		externalUrl: 'https://glove-safe.com',
 	},
 ];
