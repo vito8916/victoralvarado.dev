@@ -24,6 +24,6 @@ export const featureProjects: FeatureProject[] = [
 	{	
 		title: 'Glove-Safe',
 		description: 'Glove Safe Store — a headless Shopify e-commerce storefront. The frontend is Next.js 16 (App Router, React 19) consuming the Shopify Storefront GraphQL API.',
-		externalUrl: 'https://glove-safe.com',
+		externalUrl: 'https://www.glove-safe.com/',
 	},
 ];
