@@ -1,16 +1,17 @@
 ---
-position: Graphic Design
+position: Higher Diploma in Graphic Design
 location: Tegucigalpa, Honduras
 date: 2012-01-17
 endDate: 2013-03-10
 company: Level 7 Studios
-description: Completed formal training in graphic design, visual communication, and digital production workflows. Developed practical skills in layout, typography, composition, branding fundamentals, and creative tools. This background continues to influence my product work, especially in UI clarity, design-to-code execution, and user-centered thinking.
+description: Formal training in graphic design, visual communication, and digital production. Built practical skills in layout, typography, composition, branding, and creative tooling — a foundation that still shapes my product work in UI clarity, design-to-code execution, and user-centered thinking.
 tags:
+  - Graphic Design
   - Photoshop
   - Illustrator
   - InDesign
   - UI/UX
-showLink: true
+showLink: false
 ---
 
 >A career that allowed me to explore my creativity and learn how to integrate it with software development.

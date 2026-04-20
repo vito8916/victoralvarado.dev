@@ -1,11 +1,11 @@
 ---
-title: My Journey as a Full-Stack Developer Building, Integrating, and Modernizing Platforms.
+title: Building public-sector tools for environmental compliance
 position: Full-Stack Developer
 location: Tegucigalpa, Honduras
 date: 2017-03-17
 endDate: 2018-01-10
 company: PaperSoft
-description: I developed a public-sector platform for environmental compliance and business registration.
+description: Built a public-sector platform for environmental compliance and business registration.
 bullets:
   - Built an application for the Tegucigalpa municipality to register 1,000+ businesses handling hazardous waste.
   - Enabled data analysis workflows that identified critical compliance gaps (only ~30% meeting proper toxic waste handling practices).
@@ -15,7 +15,7 @@ tags:
   - MySQL
   - Android (native)
   - JavaScript/TypeScript
-showLink: true
+showLink: false
 ---
 
 ## Harnessing Tech for Environmental Impact: My Full-Stack Developer Journey
