@@ -9,21 +9,26 @@ featured: true
 draft: false
 
 client: "The Closet Clique (DBA of The Clique Collective LLC)"
-company: ""
+company: "NSPROS"
 industry: "Fashion / Marketplace / Education"
 engagementType: "contract"
-timeline: "2024 – Present"
+timeline: "2024 – Present (iOS launched Sep 2025, web launched Oct 2025)"
 myRole: "Engineering and UX for the marketing website and the Closet Clique iOS app (launch, acquisition, and iteration)"
 team:
   - "Founders & brand: product story and community positioning"
   - "Engineering: marketing site, iOS app, integrations, and iteration"
 
 stack:
-  - "Responsive marketing website"
-  - "iOS app (product UI)"
-  - "Conversion-focused layout"
-  - "App Store acquisition funnel"
-  - "Social & community touchpoints"
+  - "Next.js"
+  - "React"
+  - "TypeScript"
+  - "Tailwind CSS"
+  - "React Native"
+  - "Expo"
+  - "Supabase"
+  - "Supabase Auth"
+  - "Supabase Edge Functions"
+  - "Stripe Connect"
 platforms:
   - "Web"
   - "Mobile (iOS)"
@@ -44,19 +49,23 @@ categories:
   - "Case Study"
 
 metrics:
-  - label: "Launch geography"
-    value: "Dallas-first"
-    note: "Ground-up launch with a roadmap toward more high schools and college campuses."
-  - label: "Trust model"
-    value: "Verified Cliques"
-    note: "Positioning around private, school-verified networks—not open public resale."
-  - label: "Commerce"
-    value: "In-app"
-    note: "Site drives awareness and App Store installs; Stripe and Apple Pay live in the app."
+  - label: "Active users"
+    value: "1,200"
+    note: "Verified students active on the platform."
+  - label: "App Store downloads"
+    value: "1,200+"
+    note: "iOS installs since the app launched in Sep 2025."
+  - label: "Waitlist"
+    value: "216"
+    note: "Students signed up through the marketing site waiting on their school's Clique to open."
+  - label: "Launch"
+    value: "iOS Sep 2025 · Web Oct 2025"
+    note: "Dallas-first launch with a roadmap toward more high schools and college campuses."
 outcomesSummary:
-  - "Clarified the value loop—closet sharing, occasions, earning income, local handoffs, sustainability, and privacy—in scannable sections."
-  - "Connected the web story to the iOS product with App Store CTAs and “now live” messaging for early markets."
-  - "Surfaced compliance and trust: school verification disclaimer, privacy/terms, and secure payments copy aligned with how families evaluate student platforms."
+  - "Shipped an end-to-end product: React Native iOS app (Sep 2025) and Next.js marketing site (Oct 2025) backed by a single Supabase stack."
+  - "Reached 1,200+ active users and 1,200+ App Store downloads in the Dallas-first launch window, with 216 students on the waitlist for upcoming schools."
+  - "Wired Stripe Connect for peer-to-peer payments between students, with Supabase Edge Functions handling sensitive payment logic server-side."
+  - "Kept the marketing site fast and flexible while the app carries verification, listings, and in-app checkout — clean separation of concerns for a regulated-feeling student marketplace."
 
 coverImage: "/assets/images/projects/theclosetclique/cover.png"
 gallery:
@@ -66,7 +75,7 @@ ogImage: "/assets/images/projects/theclosetclique/cover.png"
 canonical: "https://theclosetclique.com/"
 
 locale: "en"
-readingTime: "8 min"
+readingTime: "6 min"
 ---
 
 # Your Clique, your closet—on the web and in the App Store.
@@ -140,6 +149,18 @@ Two screens from the **Closet Clique iPhone app**:
 
 That separation keeps marketing **fast and flexible** while the app retains **transactional and policy complexity** where it belongs.
 
+## Tech stack
+
+| Layer | Choices |
+|-------|---------|
+| Marketing site | **Next.js**, **React**, **TypeScript**, **Tailwind CSS** |
+| iOS app | **React Native** with **Expo** |
+| Backend | **Supabase** (Postgres), **Supabase Auth**, **Supabase Edge Functions** for server-side payment and verification logic |
+| Payments | **Stripe Connect** for peer-to-peer payments between verified students |
+| Shared model | One Supabase project behind both surfaces — no data duplication across web and mobile |
+
+Supabase Edge Functions are the pivot point: the **iOS app** calls them for anything that shouldn't live in the client (Stripe Connect flows, verification checks, privileged queries), so the React Native bundle stays lean and the sensitive logic stays on the server.
+
 ## Challenges
 
 1. **Tone vs. compliance** — The brand voice stays youthful and aspirational; disclosures stay visible so verification and independence claims remain defensible.
@@ -148,9 +169,11 @@ That separation keeps marketing **fast and flexible** while the app retains **tr
 
 ## Outcomes
 
-- A **cohesive public story** for a **private, school-verified** resale and rental experience—distinct from open national marketplaces.
-- **Clear bridges** from marketing to **App Store** and **community** channels.
-- **Operational transparency**: business entity, contact channels, and **in-app payments** called out in plain language.
+- **1,200 active users** and **1,200+ App Store downloads** since the iOS app launched in September 2025.
+- **216 students on the waitlist** through the marketing site, ready to activate as new school Cliques open.
+- **End-to-end product delivery**: React Native iOS app, Next.js marketing site, and a shared Supabase + Stripe Connect backend — all shipped within a single launch window.
+- **Clear separation of concerns**: fast marketing layer for brand and acquisition, app layer for verification, listings, and secure in-app checkout.
+- **Operational transparency**: registered business entity, contact channels, and in-app payments called out in plain language — the trust posture schools and parents actually read.
 
 ## Final takeaway
 

@@ -9,7 +9,7 @@ featured: true
 draft: false
 
 client: "Speed Air Conditioning"
-company: ""
+company: "NSPROS"
 industry: "HVAC / Home services"
 engagementType: "contract"
 timeline: "2025 – 2026"
@@ -33,7 +33,11 @@ stack:
 platforms:
   - "Web"
 
-links: {}
+links:
+  live: "https://speedairconditioning.com"
+additionalLinks:
+  - label: "Live site"
+    url: "https://speedairconditioning.com"
 
 tags:
   - "Next.js"
@@ -46,26 +50,30 @@ categories:
   - "Case Study"
 
 metrics:
-  - label: "Audiences"
+  - label: "Lighthouse"
+    value: "100 / 100 / 100 / 90"
+    note: "Performance, Best Practices, and SEO at 100; Accessibility at 90."
+  - label: "Audiences served"
     value: "3 segments"
-    note: "Residential, property managers, and commercial paths with tailored pages."
-  - label: "Content"
-    value: "Sanity-backed"
-    note: "Schemas for settings, navigation, pages, services, areas, blog, testimonials, SEO."
+    note: "Residential, property managers, and commercial — each with a tailored landing path."
+  - label: "Sanity content model"
+    value: "8+ schemas"
+    note: "Settings, navigation, pages, services, service areas, blog, testimonials, and reusable SEO/rich-text blocks."
   - label: "Editor experience"
-    value: "/studio"
-    note: "Embedded Sanity Studio in the Next.js app for in-context authoring."
+    value: "Embedded Studio"
+    note: "Sanity Studio mounted at /studio inside the Next.js app — no separate deployment."
 outcomesSummary:
-  - "Shipped a section-rich marketing experience: hero, services, process, about, stats, testimonials, emergency CTA, blog teaser, and service-area coverage."
-  - "Built client-side quote and contact flows with React Hook Form on top of a responsive, branded UI."
-  - "Established a Sanity content model and embedded Studio so marketing copy can move off hardcoded strings over time."
+  - "Shipped a fast, branded marketing site at speedairconditioning.com scoring 100/100/100 on Lighthouse Performance, Best Practices, and SEO (90 Accessibility)."
+  - "Delivered three audience-specific journeys (residential, property managers, commercial) under one cohesive brand — no duplicated nav, no three-site sprawl."
+  - "Established a Sanity content model with embedded Studio at /studio so marketing copy moves off hardcoded strings incrementally, on the client's schedule."
+  - "Wired client-side quote and contact forms with React Hook Form, and set up React Email templates for maintainable transactional email."
 
 coverImage: "/assets/images/projects/speed-ac/cover.png"
 gallery: []
 ogImage: "/assets/images/projects/speed-ac/cover.png"
 
 locale: "en"
-readingTime: "9 min"
+readingTime: "5 min"
 ---
 
 # Marketing that speaks to homeowners, managers, and businesses.
@@ -77,6 +85,8 @@ HVAC companies compete on trust, speed, and clarity. **Speed AC** needed a moder
 **speed-ac** is a **Next.js** marketing website for a **South Florida** HVAC contractor. The experience is built around clear service messaging, **service-area** coverage, and **lead capture** (quote and contact). Content is backed by **Sanity**: global settings, navigation, pages, services, service areas, testimonials, blog material, and **SEO** fields—editable through **Sanity Studio** mounted at **`/studio`** inside the same app.
 
 ![Speed AC marketing site](/assets/images/projects/speed-ac/cover.png)
+
+<a href="https://speedairconditioning.com" target="_blank" rel="noopener noreferrer">View live →</a>
 
 ## What shipped
 
@@ -136,9 +146,10 @@ The model is designed so **hardcoded marketing strings can migrate into Sanity i
 
 ## Outcomes
 
-- A **cohesive marketing and lead funnel** aligned with how HVAC customers actually search and decide.
-- **Editors get a real CMS path** via embedded Studio and structured content—not one-off code changes for every tweak.
-- A **stack that matches 2026-era Next.js** practice: App Router, typed forms, component-driven UI, and headless content.
+- **Lighthouse 100 / 100 / 100 / 90** on Performance, Best Practices, SEO, and Accessibility for a multi-section marketing site.
+- **One brand, three audiences** — residential, property managers, and commercial — with cohesive IA and no duplicated navigation.
+- **Editors get a real CMS path** via embedded Studio at `/studio` and structured content — not one-off code changes for every tweak.
+- **Modern Next.js stack** (App Router, React 19, Tailwind 4, shadcn/ui, React Hook Form, React Email) delivered as a maintainable long-term asset for the client.
 
 ## Final takeaway
 

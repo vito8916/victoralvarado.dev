@@ -1,7 +1,7 @@
 ---
 title: "React Simple Typewriter"
-description: "A lightweight React package for creating typewriter text effects with zero dependencies, full TypeScript support, and Next.js compatibility."
-excerpt: "An open-source npm package for effortless typewriter animations in React and Next.js apps."
+description: "A lightweight React package for typewriter text effects — zero runtime dependencies, full TypeScript types, SSR-safe for Next.js, and ~4.4KB minified."
+excerpt: "Open-source npm package for typewriter animations in React and Next.js — zero deps, full TypeScript, SSR-safe."
 publishDate: 2025-01-29
 updatedDate: 2025-01-29
 status: "live"
@@ -42,17 +42,22 @@ categories:
   - "Library"
 
 metrics:
-  - label: "Weekly downloads"
-    value: "13+"
-  - label: "Package size"
+  - label: "Bundle size"
     value: "~4.4KB"
-  - label: "Dependencies"
+    note: "Minified, ESM + CJS outputs produced by Rollup."
+  - label: "Runtime dependencies"
     value: "0"
-    note: "Zero runtime dependencies"
+    note: "No runtime deps — only React as a peer dependency."
+  - label: "Published versions"
+    value: "5"
+    note: "1.0.0 through 1.1.0, shipped with TypeScript types and a full build pipeline."
+  - label: "License"
+    value: "MIT"
+    note: "Freely usable in commercial and open-source projects."
 outcomesSummary:
-  - "Published and maintained on npm for the React/Next.js ecosystem."
-  - "Full TypeScript support and server-side rendering compatibility."
-  - "Simple API for customizable typing speed, delete speed, and loop behavior."
+  - "Shipped 5 stable versions (1.0.0 → 1.1.0) with TypeScript types, ESM + CJS outputs, and SSR-safe behavior for Next.js."
+  - "Kept the package at ~4.4KB minified with zero runtime dependencies — safe to drop into any React project without bloat."
+  - "Maintained a focused API (strings, speed, deleteSpeed, pause, loop) that covers the common cases without feature sprawl."
 
 coverImage: ""
 gallery: []
@@ -98,7 +103,7 @@ I wanted a focused, modern alternative that “just works” across the React ec
 
 ## Solution
 
-I built a `TypeWriter` component that accepts an `options` object with:
+I built a `TypeWriter` component with a single `options` prop:
 
 - `strings` — array of text to cycle through
 - `speed` — typing speed in milliseconds
@@ -106,7 +111,35 @@ I built a `TypeWriter` component that accepts an `options` object with:
 - `pause` — pause between strings
 - `loop` — whether to loop continuously
 
-The component handles the animation logic internally, uses `useRef` for performance, and works seamlessly with server-side rendering when used with Next.js `'use client'`.
+The component handles the animation logic internally, uses `useRef` to avoid re-renders during typing, and works cleanly with Next.js server-side rendering when used under the `'use client'` directive.
+
+### Usage
+
+```bash
+npm install react-simple-typewriter-vb
+```
+
+```tsx
+'use client';
+import { TypeWriter } from 'react-simple-typewriter-vb';
+
+export function Hero() {
+  return (
+    <h1>
+      I build{' '}
+      <TypeWriter
+        options={{
+          strings: ['fast web apps', 'clean APIs', 'real products'],
+          speed: 70,
+          deleteSpeed: 40,
+          pause: 1500,
+          loop: true,
+        }}
+      />
+    </h1>
+  );
+}
+```
 
 ## Tech highlights
 
@@ -126,11 +159,11 @@ The component handles the animation logic internally, uses `useRef` for performa
 
 ## Outcomes
 
-- Package published and available on npm
-- TypeScript support for better DX
-- Improved loop behavior and delete animation in v1.1
-- Server-side rendering fix for Next.js
-- Solid foundation for future enhancements
+- **5 stable releases** (1.0.0 → 1.1.0) shipped with TypeScript types, ESM + CJS outputs, and a Rollup + Babel build pipeline.
+- **~4.4KB minified** with **zero runtime dependencies** — safe to drop into any React project without pulling in a transitive tree.
+- **SSR-safe for Next.js** under the App Router and `'use client'` boundary — no hydration warnings.
+- **Focused public API** (5 options) that covers the common hero/terminal/subtle animation cases without feature sprawl.
+- **MIT licensed** and maintained on npm for anyone in the React/Next.js ecosystem to use.
 
 ## Challenges
 

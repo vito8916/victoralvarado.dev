@@ -12,11 +12,10 @@ client: ""
 company: "Independent Product"
 industry: "Developer Tools / AI"
 engagementType: "personal"
-timeline: "2025 – Present"
+timeline: "Feb 2025 – Present (indie, currently idle)"
 myRole: "Founder & Senior Product Engineer"
 team:
-  - "Solo (product, UX, engineering)"
-  - "AI-assisted workflows for iteration speed"
+  - "Solo — product, UX, engineering, and go-to-market"
 
 stack:
   - "Next.js"
@@ -25,6 +24,7 @@ stack:
   - "Supabase"
   - "PostgreSQL"
   - "OpenAI API"
+  - "Stripe"
   - "Vercel"
 platforms:
   - "Web"
@@ -45,19 +45,23 @@ categories:
   - "Case Study"
 
 metrics:
-  - label: "Workflow consistency"
-    value: "Improved"
-    note: "Standardized rule output format across different agent use cases."
-  - label: "Time to first usable prompt/rule set"
-    value: "Reduced"
-    note: "Users can generate structured rules faster than writing from scratch."
-  - label: "Iteration speed"
-    value: "Faster"
-    note: "Reusable templates reduced repeated setup effort."
+  - label: "Rule sets generated"
+    value: "100+"
+    note: "Structured rules and skills produced for users since launch."
+  - label: "Signup → paid"
+    value: "18 / 20"
+    note: "Of 20 total signups, 18 converted to a paid subscription — early but highly qualified adoption."
+  - label: "Launch"
+    value: "Feb 2025"
+    note: "Public launch on 25 Feb 2025 as a solo indie product; currently idle."
+  - label: "Stack footprint"
+    value: "Solo-shipped SaaS"
+    note: "Next.js, Supabase, OpenAI API, and Stripe — one person, full stack, live in weeks."
 outcomesSummary:
-  - "Turned unstructured ideas into consistent rule sets for AI coding agents."
-  - "Reduced prompt/rule authoring friction with guided generation flows."
-  - "Enabled repeatable setup patterns for new projects."
+  - "Shipped a working SaaS solo: Next.js + Supabase + OpenAI + Stripe, live on 25 Feb 2025."
+  - "Validated monetization early — 18 of 20 signups converted to paid, a signal that the problem was real for the users it reached."
+  - "Generated 100+ structured rule sets for AI coding agents, proving the guided generation flow worked end-to-end."
+  - "Currently idle: honest takeaway on solo indie product distribution, not the engineering."
 
 coverImage: "/assets/images/projects/rulesforai/cover.png"
 gallery:
@@ -70,7 +74,7 @@ canonical: "https://www.rulesforai.app/"
 
 confidentiality: "Some implementation details are intentionally summarized."
 locale: "en"
-readingTime: "10 min"
+readingTime: "6 min"
 ---
 
 # Structured rules, faster AI coding.
@@ -150,55 +154,67 @@ The **cover image** in the overview is one view of the product; below are **four
 
 ### Architecture
 
-- Next.js application for fast iteration and server/client integration.
-- Supabase + PostgreSQL for persistence and simple operational overhead.
-- API orchestration for AI generation and structured transformation.
+- **Next.js** application for fast iteration and a single deployment surface.
+- **Supabase + PostgreSQL** for auth, persistence, and low operational overhead.
+- **OpenAI API** for rule generation, called through a server-side orchestration layer.
+- **Stripe** for subscription billing, gating access to paid features.
+- **Vercel** for deployment.
 
 ### Data model
 
-Core entities were designed around:
+Core entities:
 
 - Project contexts
 - Generated rule artifacts
-- Reusable templates/patterns
+- Reusable templates and patterns
 - User-level organization of outputs
 
 ### Product engineering decisions
 
 - Kept schema and validation close to domain boundaries for safer evolution.
-- Used incremental releases to validate assumptions quickly.
-- Optimized for maintainability and low operational complexity.
+- Shipped incrementally to validate assumptions quickly.
+- Optimized for maintainability and low operational complexity — one person had to run the whole stack.
 
 ## Outcomes
 
-Even at an evolving stage, the product delivered meaningful value:
+- **Live, solo-built SaaS** — Next.js, Supabase, OpenAI, and Stripe, shipped by one person on 25 Feb 2025.
+- **18 of 20 signups converted to paid** — an unusually strong early conversion rate that validated the core problem for the users it reached.
+- **100+ rule sets generated** through the guided flow, proving the context → structured output loop worked end-to-end for real projects.
+- **Operational simplicity**: Supabase managed auth and data, Stripe managed billing, OpenAI handled generation — so one person could actually run it.
 
-- Better consistency in generated rule quality.
-- Faster path from idea → usable AI instruction set.
-- Reduced repeated setup work through reusable patterns.
-- Stronger alignment between AI outputs and project conventions.
+## Current status
+
+RulesForAI is **live but currently idle** — no active users today. The engineering and monetization both worked; distribution for a solo indie product is the harder, still-unsolved part. The case study documents what was built, what was validated, and what the honest ceiling looked like at the solo stage.
 
 ## Challenges
 
-### 1) Balancing flexibility with structure
-Too much flexibility creates noise; too much structure feels rigid.  
-I solved this by offering guided inputs with enough freedom for project-specific constraints.
+### 1. Prompt → structured output reliability
 
-### 2) Keeping outputs useful, not verbose
-Long outputs can look impressive but are hard to apply.  
-I iterated toward concise, operational outputs that can be used immediately.
+The defining technical problem was making an LLM produce **well-formed, reusable rule artifacts** instead of free-form prose. In practice this meant:
 
-### 3) Product scope control
-It was tempting to add many adjacent features early.  
-I kept focus on one core value loop: context in → structured rules out.
+- **Strict output schemas.** Every generation path targeted a typed shape (rule fields, skill fields, metadata) — not a paragraph. Outputs that didn't match the schema were rejected and retried rather than shown to the user.
+- **Validation at the boundary.** Responses were parsed and validated server-side before persistence, so a malformed generation couldn't corrupt a user's project.
+- **Retry with tightening.** On failed parses, the orchestration layer re-prompted with stricter framing and examples instead of failing loudly to the user.
+- **Concise over verbose.** LLMs tend to pad. The prompting stack was tuned to produce **operational** rules — short, applicable, reusable — not essays that look impressive but no one actually uses.
 
-## What I’d improve next
+Getting this loop reliable is what made the product feel like a tool instead of a prompt wrapper.
 
-- Add deeper team collaboration and versioning for rule sets.
-- Expand export formats for more agent ecosystems.
-- Add quality scoring/validation checks before export.
-- Provide onboarding presets by stack (e.g., Next.js + Supabase + Stripe).
+### 2. Balancing flexibility with structure
+
+Too much flexibility produces noise; too much structure feels rigid. The guided inputs give users enough room to express project-specific constraints while keeping the output shape predictable.
+
+### 3. Scope discipline
+
+Solo products die from feature bloat. I kept the loop small — **context in → structured rules out** — and left adjacent features (team collaboration, versioning, quality scoring) on the roadmap rather than shipping shallow versions of everything.
+
+## What I'd improve next
+
+- Team collaboration and versioning for rule sets.
+- Export formats for more agent ecosystems (beyond the initial target).
+- Quality scoring and validation checks before export.
+- Onboarding presets by stack (e.g., Next.js + Supabase + Stripe).
+- **Distribution** — the real lesson from the idle state: indie SaaS lives or dies on reach, not code.
 
 ## Final takeaway
 
-RulesForAI demonstrates my product engineering style: identify a real workflow bottleneck, design a focused solution, and ship a practical system that improves speed, consistency, and developer confidence.
+RulesForAI is an honest portrait of solo product engineering: a real workflow problem, a focused solution, a monetized shipping path, and a validated-but-idle current state. The craft — schema-enforced LLM outputs, clean domain modeling, a one-person stack that actually runs — held up; the distribution problem is the real lesson.

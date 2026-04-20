@@ -13,8 +13,8 @@ export const featureProjects: FeatureProject[] = [
 	},
 	{
 		title: 'BpFairValue.com',
-		description: 'SaaS platform for fair value analysis and decision support for stock investors.',
-		externalUrl: 'https://bpfairvalue.com',
+		description: 'Options trading platform—fair value pricing, premarket LOI, screener, and insights—with subscription onboarding.',
+		externalUrl: 'https://bpfairvalue.com/',
 	},
 	{
 		title: 'TheClosetClique.com',

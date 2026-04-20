@@ -9,7 +9,7 @@ featured: true
 draft: false
 
 client: "GloveSafe USA Corp"
-company: ""
+company: "NSPROS"
 industry: "E-commerce / Sporting goods"
 engagementType: "contract"
 timeline: "2025 – 2026"
@@ -44,19 +44,23 @@ categories:
   - "Case Study"
 
 metrics:
-  - label: "Bundle model"
-    value: "Multi–line item"
-    note: "Core + selected patches as real SKUs—inventory stays accurate in Shopify."
+  - label: "Orders shipped"
+    value: "500+"
+    note: "Since launch on 4 Mar 2026."
+  - label: "Catalog"
+    value: "3,000 SKUs"
+    note: "Core straps plus hook-and-loop patches live in Shopify at launch, with headroom to 8k+."
+  - label: "Team-order leads"
+    value: "25"
+    note: "B2B inquiries captured via the Team Orders form since launch."
   - label: "Checkout"
     value: "Shopify-hosted"
-    note: "Payments, tax, and fraud tooling without custom checkout risk."
-  - label: "Catalog scale path"
-    value: "3k → 8k SKUs"
-    note: "Architecture and IA aimed at large patch catalogs with solid SEO."
+    note: "Payments, tax, and fraud tooling kept on Shopify — zero custom checkout risk."
 outcomesSummary:
-  - "Delivered a premium “build your bundle” flow: pick the core strap set, choose exactly N patches, see price and discount before add-to-cart."
-  - "Kept Shopify as the system of record for products, inventory, and checkout while Next.js owns UX, SEO, and speed."
-  - "Shipped supporting journeys: collections, PDPs, cart upsells, and Team Orders as B2B lead capture."
+  - "500+ orders shipped in the first weeks post-launch (4 Mar 2026), with inventory staying accurate across bundles and singles."
+  - "Catalog launched at 3,000 SKUs with an architecture and IA designed to scale to 8,000+ without re-platforming."
+  - "25 B2B team-order leads captured through a lightweight form — no bespoke B2B checkout needed in v1."
+  - "Shopify remained the system of record for products, inventory, and checkout; Next.js owned UX, SEO, and speed."
 
 coverImage: "/assets/images/projects/glove-safe/cover.png"
 gallery: []
@@ -64,7 +68,7 @@ ogImage: "/assets/images/projects/glove-safe/cover.png"
 canonical: "https://www.glove-safe.com/"
 
 locale: "en"
-readingTime: "10 min"
+readingTime: "6 min"
 ---
 
 # Commerce UX that respects inventory reality.
@@ -147,16 +151,34 @@ Work was sequenced to reduce risk: **Shopify operational setup** (taxes, shippin
 
 ## Outcomes
 
-- **Correct inventory behavior** across bundle and single-SKU purchases.
-- **Clear customer path** from discovery → customize bundle → checkout.
-- **Operational simplicity** for the business: day-to-day changes happen in Shopify, not in code.
-- **Foundation for growth** in catalog size and future enhancements (search, affiliates, deeper B2B)—without rewriting the commerce core.
+- **500+ orders shipped** since launch on **4 Mar 2026**, with inventory staying accurate across bundles and single-SKU purchases.
+- **25 B2B team-order leads** captured through a lightweight inquiry form — no custom B2B checkout needed in v1.
+- **3,000 live SKUs** at launch, on an architecture sized to scale to **8,000+** without re-platforming.
+- **Operational simplicity** for the business: day-to-day changes (products, prices, inventory, discounts) happen in Shopify Admin, not in code.
+- **Foundation for growth** in catalog size and future enhancements (search, affiliates, deeper B2B) — without rewriting the commerce core.
 
 ## Challenges
 
-1. **Bundle discounts vs. line items** — The discount mechanism (automatic rules vs. controlled codes) had to be chosen early and tested against edge cases; keeping checkout on Shopify narrowed the risk surface.
-2. **Catalog scale** — A large patch catalog demands disciplined **pagination, filtering, and caching** so pages stay fast as SKUs grow.
-3. **UX vs. implementation** — The storefront must present a **single cohesive bundle** while the implementation stays **honest per SKU**—alignment between design and cart logic was essential.
+### 1. Keeping Shopify and Next.js in sync
+
+The hardest problem was running a fast, cache-heavy Next.js storefront **without ever drifting from Shopify's inventory truth**. A few concrete decisions shaped the solution:
+
+- **Single source of truth.** Products, variants, prices, inventory, and discounts live in Shopify — full stop. Next.js never owns commerce state; it reads via the **Storefront GraphQL API** and composes the experience on top.
+- **Cache with invalidation, not TTL guessing.** Collection and PDP pages are aggressively cached for speed, but **Shopify webhooks trigger on-demand revalidation** whenever products, inventory, or collections change. That keeps pages fast without serving stale "in stock" lies.
+- **Cart lives server-side on Shopify.** The bundle builder composes line items in the UI, but the cart itself is a **Shopify Cart** object — so discount rules, taxes, and checkout hand-off all Just Work, and multiple tabs stay consistent.
+- **Graceful reads during outages.** The storefront tolerates transient Storefront API slowness with sensible request timeouts and cached fallbacks, so a blip upstream doesn't blank the shelf.
+
+### 2. Bundle discounts vs. real line items
+
+The bundle is presented as one offer, but the cart must carry **separate line items** so inventory decrements per real SKU. Choosing between **automatic discount rules** and **controlled discount codes** had to happen early — both were tested against edge cases (partial inventory, mixed-bundle carts, abandoned-cart recovery) before committing.
+
+### 3. Catalog scale
+
+Thousands of patch SKUs demand disciplined **pagination, filtering, and image strategy** so collection pages stay fast as the catalog grows from 3,000 toward 8,000+ — and so Google can actually crawl and index the long tail.
+
+### 4. UX vs. implementation honesty
+
+The storefront must present a **single cohesive bundle** while the implementation stays **honest per SKU**. Alignment between the bundle UI (count validation, live pricing, stock messaging) and the cart's underlying line-item structure was essential to avoid "it added what?" support tickets.
 
 ## Final takeaway
 
