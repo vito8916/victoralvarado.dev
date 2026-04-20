@@ -9,6 +9,7 @@ import Memory from "../../sections/aboutme/Memory.astro";
 import SimplyPaper from "../../sections/aboutme/SimplyPaper.astro";
 import Traveling from "../../sections/aboutme/Traveling.astro";
 import Hobbies from "../../sections/aboutme/Hobbies.astro";
+import FeatureProjects from "../../components/FeatureProjects.astro";
 ---
 
 <Layout title="Victor Alvarado | About Me">
@@ -23,7 +24,7 @@ import Hobbies from "../../sections/aboutme/Hobbies.astro";
             </a>
         </div>
     </div>
-    <Header title="About Me And My Journey" description=" Welcome to my personal website." showContact={false}/>
+    <Header title="About me and my journey" description="The story behind the engineer — how I started, what shaped me, and the places, people, and projects along the way." showContact={false}/>
     <main class="about">
         <!--SECTION - ABOUT ME AND GREETING -->
         <Greeting />
@@ -42,6 +43,11 @@ import Hobbies from "../../sections/aboutme/Hobbies.astro";
 
         <!--SECTION - ABOUT HOBBIES-->
         <Hobbies />
+
+        <!--Featured Projects Section-->
+        <section class="container">
+            <FeatureProjects/>
+        </section>
     </main>
 </Layout>
 
