@@ -29,5 +29,6 @@ export const featureProjects: FeatureProject[] = [
 	{
 		title: 'Speed AC',
 		description: 'Next.js marketing site for a South Florida HVAC company—Sanity CMS with embedded Studio, multi-audience pages, and React Hook Form lead capture.',
+		externalUrl: 'https://speedairconditioning.com/',
 	},
 ];
