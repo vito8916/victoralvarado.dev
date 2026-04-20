@@ -1,5 +1,5 @@
 ---
-import { fade } from "astro:transitions";
+import { fade, slide } from "astro:transitions";
 import vic1 from "@assets/images/about/vicmac2.jpeg";
 import { Image } from "astro:assets";
 export interface Props {
@@ -14,6 +14,25 @@ const { title, description, showContact, slug, tags } = Astro.props;
 let titles = title.split(" ");
 const joinedTitles = titles.slice(0, -1).join(" ");
 const lastTitle = titles[titles.length - 1];
+
+const customSlide = {
+  old: {
+    name: 'slideOut',
+    duration: '0.2s',
+    easing: 'ease-out',
+    fillMode: 'backwards',
+  },
+  new: {
+    name: 'slideIn',
+    duration: '0.2s',
+    easing: 'ease-in',
+    fillMode: 'backwards',
+  }
+};
+const customTransition = {
+  forwards: customSlide,
+  backwards: customSlide,
+};
 ---
 
 <header class="container">
@@ -122,7 +141,7 @@ const lastTitle = titles[titles.length - 1];
 
 	{
 		showContact === false && tags && (
-			<div class="tags" transition:animate={fade({ duration: "0.5s" })}>
+			<div class="tags" transition:animate={customTransition}>
 				{tags.map((tag) => (
 					<span class="tag">{tag}</span>
 				))}
@@ -235,6 +254,24 @@ const lastTitle = titles[titles.length - 1];
 		}
 		header .header-contact .c-grid {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	/* SlideIn animation from top to bottom */
+	@keyframes slideIn {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+	/* SlideOut animation from bottom to top */
+	@keyframes slideOut {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(-100%);
 		}
 	}
 </style>
