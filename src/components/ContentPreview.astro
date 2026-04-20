@@ -36,6 +36,32 @@ const {entry, Content} = Astro.props;
         height: auto;
     }
 
+    article .article-two-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 1.25rem;
+        margin: 1.5rem 0;
+        align-items: start;
+    }
+
+    article .article-two-up figure {
+        margin: 0;
+    }
+
+    article .article-two-up figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        color: var(--color-text);
+        opacity: 0.85;
+    }
+
+    @media (max-width: 640px) {
+        article .article-two-up {
+            grid-template-columns: 1fr;
+        }
+    }
+
     .tags {
         display: flex;
         gap: 0.5rem;

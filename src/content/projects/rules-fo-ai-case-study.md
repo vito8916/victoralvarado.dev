@@ -3,7 +3,7 @@ title: "RulesForAI"
 description: "A platform that helps developers generate structured rules and skills for AI coding agents from natural-language project context."
 excerpt: "How I built RulesForAI to standardize AI-assisted coding workflows and improve output consistency."
 publishDate: 2026-02-11
-updatedDate: 2026-02-11
+updatedDate: 2026-04-19
 status: "live"
 featured: true
 draft: false
@@ -31,10 +31,6 @@ platforms:
 
 links:
   live: "https://www.rulesforai.app/"
-  github: "https://www.rulesforai.app/"
-  caseStudyRepo: "https://www.rulesforai.app/"
-  demoVideo: "https://www.rulesforai.app/"
-  booking: "https://www.rulesforai.app/"
 additionalLinks:
   - label: "Product website"
     url: "https://www.rulesforai.app/"
@@ -63,14 +59,18 @@ outcomesSummary:
   - "Reduced prompt/rule authoring friction with guided generation flows."
   - "Enabled repeatable setup patterns for new projects."
 
-coverImage: "/images/case-studies/rulesforai/cover.png"
-gallery: []
-ogImage: "/images/case-studies/rulesforai/og.png"
+coverImage: "/assets/images/projects/rulesforai/cover.png"
+gallery:
+  - "/assets/images/projects/rulesforai/dashboard-1.png"
+  - "/assets/images/projects/rulesforai/dashboard-project-detail.png"
+  - "/assets/images/projects/rulesforai/dashboard-new-project.png"
+  - "/assets/images/projects/rulesforai/dashboard-subscription-details.png"
+ogImage: "/assets/images/projects/rulesforai/cover.png"
 canonical: "https://www.rulesforai.app/"
 
 confidentiality: "Some implementation details are intentionally summarized."
 locale: "en"
-readingTime: "8 min"
+readingTime: "10 min"
 ---
 
 # Structured rules, faster AI coding.
@@ -83,6 +83,8 @@ RulesForAI is a developer-focused web product that helps users create **Rules** 
 The core value is consistency: instead of relying on ad-hoc prompts, users generate standardized instructions that are easier to reuse across projects.
 
 I owned the full lifecycle: product direction, UX, architecture, full-stack implementation, and ongoing iteration.
+
+![RulesForAI — product interface](/assets/images/projects/rulesforai/cover.png)
 
 <a href="https://www.rulesforai.app/" target="_blank" rel="noopener noreferrer">View live →</a>
 
@@ -121,6 +123,28 @@ Key product choices:
 - Prioritized **clarity over feature bloat** in early versions.
 - Focused on **structured outputs** instead of generic long-form prompts.
 - Built for **repeatability**, so users can start from reusable patterns, not blank pages.
+
+## Dashboard
+
+The **cover image** in the overview is one view of the product; below are **four more dashboard screenshots** from the same web app.
+
+<div class="article-two-up" role="group" aria-label="RulesForAI dashboard screenshots 1 and 2">
+<figure>
+<img src="/assets/images/projects/rulesforai/dashboard-1.png" alt="RulesForAI dashboard — additional view 1" loading="lazy" decoding="async" />
+</figure>
+<figure>
+<img src="/assets/images/projects/rulesforai/dashboard-new-project.png" alt="RulesForAI dashboard — additional view 2" loading="lazy" decoding="async" />
+</figure>
+</div>
+
+<div class="article-two-up" role="group" aria-label="RulesForAI dashboard screenshots 3 and 4">
+<figure>
+<img src="/assets/images/projects/rulesforai/dashboard-project-detail.png" alt="RulesForAI dashboard — additional view 3" loading="lazy" decoding="async" />
+</figure>
+<figure>
+<img src="/assets/images/projects/rulesforai/dashboard-subscription-details.png" alt="RulesForAI dashboard — additional view 4" loading="lazy" decoding="async" />
+</figure>
+</div>
 
 ## Tech highlights
 
