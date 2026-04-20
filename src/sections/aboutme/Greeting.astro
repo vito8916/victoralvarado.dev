@@ -1,10 +1,10 @@
 ---
-import vic1 from '@assets/images/about/vic1.webp';
+import vic1 from '@assets/images/about/vicmac1.jpg';
 import {Image} from "astro:assets";
 ---
 <section class="container mb-12">
     <div class="profile-section">
-        <Image class="profile-picture" src={vic1} alt="cover of victor alvarado" loading={"eager"}/>
+        <Image transition:name="profile-picture" class="profile-picture" src={vic1} alt="cover of victor alvarado" loading={"eager"}/>
         <div>
             <p>
                 🤚🏻 Hi! I'm Victor Alvarado, a software engineer and full-stack developer from Honduras 🇭🇳,
