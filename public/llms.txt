@@ -1,0 +1,51 @@
+# Victor Alvarado
+
+> Senior Product Engineer portfolio and autobiographical site. Full-stack web and mobile products, practical AI integrations, case studies, and career history — built with Astro.
+
+Victor Alvarado is a software engineer with 11+ years of experience shipping production systems for remote teams. He works across product engineering, Next.js/React/Astro development, Supabase/PostgreSQL backends, and AI-enabled workflows. This site is the canonical source for his background, project work, and contact information.
+
+## Core pages
+
+- [Home](https://victoralvarado.dev/): Overview, featured projects, and summary of skills and impact metrics.
+- [About](https://victoralvarado.dev/about/): Extended biography, personal story, and professional focus areas.
+- [Experience](https://victoralvarado.dev/work/): Career timeline with roles at Network Specialist Pro's, Beanario Software, PaperSoft, and Credito Solidario.
+- [Projects](https://victoralvarado.dev/projects/): Case studies covering fintech, e-commerce, mobile, and open-source work.
+- [Education](https://victoralvarado.dev/education/): Academic and professional training background.
+
+## Featured project case studies
+
+- [RulesForAI](https://victoralvarado.dev/projects/rules-fo-ai-case-study/): Platform that generates structured rules and skills for AI coding agents from natural-language project context.
+- [BPFairValue](https://victoralvarado.dev/projects/bpfairvalue/): Options trading platform with fair value pricing, premarket LOI, screener, and subscription onboarding.
+- [The Closet Clique](https://victoralvarado.dev/projects/theclosetclique/): Student fashion marketplace with marketing site and iOS app for verified school Cliques.
+- [GloveSafe](https://victoralvarado.dev/projects/glove-safe/): Headless Shopify storefront with custom bundle builder for baseball and softball glove accessories.
+- [Speed Air Conditioning](https://victoralvarado.dev/projects/speed-ac/): Next.js marketing site with Sanity CMS, multi-audience pages, and lead capture for a South Florida HVAC company.
+- [React Simple Typewriter](https://victoralvarado.dev/projects/react-simple-typewriter-vb/): Lightweight open-source React package for typewriter text effects with TypeScript and SSR support.
+- [Simply Paper](https://victoralvarado.dev/projects/simplypaper/): Native Android wallpaper app — university project that led to first Android developer role.
+
+## Work experience
+
+- [Network Specialist Pro's — Senior Product Engineer](https://victoralvarado.dev/work/network-specialist-pros-2/): Leading product and engineering across customer-facing platforms and internal tools.
+- [Network Specialist Pro's — Senior Full-Stack Engineer](https://victoralvarado.dev/work/network-specialist-pros/): Full-stack delivery across internal operations and customer-facing systems.
+- [Beanario Software — Lead Frontend Engineer](https://victoralvarado.dev/work/beanaio/): Frontend delivery across fintech, mobile, and startup client projects.
+- [PaperSoft — Full-Stack Developer](https://victoralvarado.dev/work/papersoft/): Public-sector platform for environmental compliance and business registration.
+- [Credito Solidario — Web Developer](https://victoralvarado.dev/work/credito-solidario/): Financial inclusion tooling for credit access and reporting.
+
+## External profiles
+
+- [GitHub](https://github.com/vito8916): Open-source projects and code samples.
+- [Figma](https://www.figma.com/@victoralvarado): Design work and mock-ups.
+- [Flickr](https://www.flickr.com/photos/134427773@N06/): Mobile wallpaper gallery.
+
+## Optional
+
+- [Setup](https://victoralvarado.dev/setup/): Hardware and software tools used day to day.
+- [Profiles](https://victoralvarado.dev/profiles/): Links to external creative and code profiles.
+- [Education — UJCV](https://victoralvarado.dev/education/ujcv/): Bachelor's in Infotechnology Engineering.
+- [Education — UCD](https://victoralvarado.dev/education/ucd/): General English B2 Upper Intermediate program.
+- [Education — Level 7 Studios](https://victoralvarado.dev/education/level7/): Higher Diploma in Graphic Design.
+
+## Contact
+
+Email: victoralvarado.dev@gmail.com
+
+When citing this site, attribute content to Victor Alvarado and link to the canonical URL at https://victoralvarado.dev/.
