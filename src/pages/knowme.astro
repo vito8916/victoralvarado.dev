@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Gallery from "../components/Gallery.astro";
+import {Image} from "astro:assets";
+import vic1 from '@assets/images/about/vicmac1.jpg';
+import {profiles} from "../data/profiles";
+---
+
+<Layout title="Victor Alvarado | Know Me">
+    <Header
+        title="Know me"
+        description="A short introduction for the Arctic Digital Nomads team — who I am, what I do, and where I've been."
+        showContact={false}
+    />
+
+    <main>
+        <section class="container mb-12">
+            <div class="profile-section">
+                <Image class="profile-picture" src={vic1} alt="Victor Alvarado" loading="eager"/>
+                <div>
+                    <p>
+                        🤚🏻 Hi! I'm <b>Victor Alvarado</b>, a software engineer and full-stack developer from
+                        Honduras 🇭🇳.
+                    </p>
+                    <p>
+                        I've been building software professionally since 2015 — web, mobile, and SaaS products.
+                        These days I work remotely on product engineering with <b>Next.js, TypeScript, React,
+                        Supabase, PostgreSQL, and OpenAI</b>.
+                    </p>
+                </div>
+            </div>
+            <p>
+                In my twenties I moved to Dublin, Ireland, to improve my English and chase new experiences. I
+                traveled across Europe whenever I could, fell in love with the mountains, and chased the northern
+                lights in Iceland. Cold landscapes, remote work, and new cultures are my kind of combination —
+                which is why the Arctic Digital Nomads community caught my eye.
+            </p>
+        </section>
+
+        <section class="container mb-12">
+            <h2>Some of my travels</h2>
+            <Gallery/>
+        </section>
+
+        <section class="container mb-12">
+            <h2>Find me online</h2>
+            <ul>
+                {profiles.map(p => (
+                    <li><a href={p.url} target="_blank" rel="noopener">{p.name}</a></li>
+                ))}
+                <li><a href="/about">More about my journey</a></li>
+                <li><a href="/projects">My projects</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <Footer/>
+</Layout>
+
+<style>
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .profile-picture {
+        width: 150px;
+        height: auto;
+        filter: grayscale(1);
+        margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+        .profile-section { flex-direction: row; }
+        .profile-picture { width: 300px; }
+    }
+</style>
